@@ -1,0 +1,81 @@
+#slider{
+    transform: translateY(-60px);
+    position: relative;
+    width: 100%;
+    height: 350px;
+}
+.slider-content {
+    position: relative;
+    width: 100%;
+}
+
+.silder-content-top-list:hover button{
+    opacity: 1;
+}
+
+.silder-content-top{
+    width: 100%;
+    height: 460px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+.silder-content-top img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.silder-content-top img{
+    position: absolute;
+}
+.silder-content-top a:nth-child(2) img{
+    transform: translateX(100%);
+}
+.silder-content-top a:nth-child(3) img{
+    transform: translateX(200%);
+}
+.silder-content-top a:nth-child(4) img{
+    transform: translateX(300%);
+}
+.silder-content-top a:nth-child(5) img{
+    transform: translateX(400%);
+}
+.silder-content-top-list{
+    position: relative;
+    overflow: hidden;
+}
+.silder-content-top-btn{
+    position: absolute;
+    top:50%;
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.silder-content-top-btn button{
+    background-color:transparent;
+    cursor: pointer;
+    border: none;
+    opacity: 0;
+    width: 35px;
+    height: 40px;
+}
+.silder-content-top-btn img{
+    max-width: 100%;
+}
+.silder-content-bottom{
+    width: 7%;
+    margin: auto;
+    position: absolute;
+    display: flex;
+    justify-content:space-around;
+    left: 48%;
+    top:97%;
+}
+.silder-content-bottom li{
+    cursor: pointer;
+    width: 15px;
+    height: 1px;
+    border-top: 3px solid white;
+}
+.silder-content-bottom li.action{
+    border-top: 3px solid orange;
+}

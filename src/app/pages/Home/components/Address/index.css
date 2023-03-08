@@ -1,0 +1,202 @@
+#addres{
+    position: relative;
+    top:250px;  
+    background-color:#fff;
+    padding-bottom: 50px;
+    height: 480px;
+    overflow: hidden;
+}
+.addres-menu{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.addres-content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease;
+}
+.addres-left{
+   flex:4;
+}
+.addres-right{
+    flex:5;
+}
+.animate-btn-warp1{
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom:20px;
+}
+.animate-btn1{
+    width: 70%;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    border: 2px solid #EA8025;
+    padding: 8px 25px;
+    display: inline-block;
+    background: #EA8025;
+    text-align: center;
+}
+.addres-left-content{
+    width: 50%;
+    margin: auto;
+}
+.addres-left-move{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+.addres-left-move span{
+    width: 25px;
+    height: 25px;
+    margin-right: 32px;
+}
+.addres-left-move img{
+    width: 100%;
+    border: 2px solid #000;
+    border-radius: 50%;
+}
+.addres-right-menu{
+    width: 80%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+.addres-right-menu:hover button{
+    opacity:1;
+}
+.addres-right-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+}
+.addres-right-item{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+.addres-right-item-btn{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content:space-between;
+    top: 50%;
+}
+.addres-right-item-btn button{
+    border:none;
+    background-color:transparent;
+    opacity: 0;
+    cursor: pointer;
+}
+.addres-right-item-btn img{
+    width: 30px;
+    height: 30px;
+}
+.addres-menu{
+    height: 100%;
+    position: absolute;
+    background-color:transparent;
+}
+#addres  .addres-menu:nth-child(2){
+    transform: translateX(100%);
+}
+#addres .addres-menu:nth-child(3) {
+    transform: translateX(200%);
+}
+#addres .addres-menu:nth-child(4) {
+    transform: translateX(300%);
+}
+
+.addres-right-item a:nth-child(2) img{
+    transform: translateX(100%);
+}
+.addres-right-item a:nth-child(3) img{
+    transform: translateX(200%);
+}
+.addres-right-item a:nth-child(4) img{
+    transform: translateX(300%);
+}
+.addres-right-item a:nth-child(5) img{
+    transform: translateX(400%);
+}
+.addres-right-item1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+}
+.addres-right-item1{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+.addres-right-item1 a:nth-child(2) img{
+    transform: translateX(100%);
+}
+.addres-right-item1 a:nth-child(3) img{
+    transform: translateX(200%);
+}
+.addres-right-item1 a:nth-child(4) img{
+    transform: translateX(300%);
+}
+.addres-right-item1 a:nth-child(5) img{
+    transform: translateX(400%);
+}
+.addres-right-item2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+}
+.addres-right-item2{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+.addres-right-item2 a:nth-child(2) img{
+    transform: translateX(100%);
+}
+.addres-right-item2 a:nth-child(3) img{
+    transform: translateX(200%);
+}
+.addres-right-item2 a:nth-child(4) img{
+    transform: translateX(300%);
+}
+.addres-right-item2 a:nth-child(5) img{
+    transform: translateX(400%);
+}
+.addres-right-item3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+}
+.addres-right-item3{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+.addres-right-item3 a:nth-child(2) img{
+    transform: translateX(100%);
+}
+.addres-right-item3 a:nth-child(3) img{
+    transform: translateX(200%);
+}
+
+.addres-left-content h3{
+    font-size:24px;
+    line-height:1.4;
+    margin-bottom: 10px;
+}

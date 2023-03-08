@@ -12,23 +12,29 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { GlobalStyle } from 'styles/global-styles';
 
+import { Home } from './pages/Home/Loadable';
+import { Coffee } from './pages/Cafe/Loadable';
+import { HouseStory } from './pages/HouseStory/Loadable';
 import { HomePage } from './pages/HomePage/Loadable';
 import { NotFoundPage } from './components/NotFoundPage/Loadable';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 
 export function App() {
-  const { i18n } = useTranslation();
+  // const { i18n } = useTranslation();
   return (
     <BrowserRouter>
       <Helmet
-        titleTemplate="%s - React Boilerplate"
+        titleTemplate="%s - The Coffee House"
         defaultTitle="React Boilerplate"
-        htmlAttributes={{ lang: i18n.language }}
+        // htmlAttributes={{ lang: i18n.language }}
       >
         <meta name="description" content="A React Boilerplate application" />
       </Helmet>
 
       <Routes>
+        {/* <Route path="/" element={<Home />} /> */}
+        {/* <Route path="/" element={<Coffee />} /> */}
+        <Route path="/" element={<HouseStory />} />
         <Route path="/" element={<HomePage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

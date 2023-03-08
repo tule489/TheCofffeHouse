@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'SF Pro Text', sans-serif;
+    line-height: 1.42857143;
+    font-size: 14px;
+    color: #000;
+    background: #fff;
+}
