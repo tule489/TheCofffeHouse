@@ -32,8 +32,8 @@ export function App() {
       </Helmet>
 
       <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
-        {/* <Route path="/" element={<Coffee />} /> */}
+        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Coffee />} />
         <Route path="/" element={<HouseStory />} />
         <Route path="/" element={<HomePage />} />
         <Route path="*" element={<NotFoundPage />} />
