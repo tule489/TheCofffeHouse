@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './index.css';
 import img0 from './assets/0.png';
 import img1 from './assets/1.png';
@@ -35,33 +36,23 @@ export default function Header() {
           <div className="header-nav">
             <div className="header-logo">
               <h1 className="hidden">
-                <a href="/" target="_parent">
-                  THE CO̲FFEE HO̲USE
-                </a>
+                <Link to="/">THE CO̲FFEE HO̲USE</Link>
               </h1>
             </div>
             <div className="header-menu">
               <ul className="clearfix">
                 <li>
-                  <a className="menu-org" href="/coffee" target="_parent">
+                  <Link className="menu-org" to="/coffee">
                     Cà phê
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    className="menu-org"
-                    href="../html/tra.html "
-                    target="_parent"
-                  >
+                  <a className="menu-org" href="../html/tra.html ">
                     Trà
                   </a>
                 </li>
                 <li className="has-child">
-                  <a
-                    className="menu-org"
-                    href="../html/menu.html"
-                    target="_parent"
-                  >
+                  <a className="menu-org" href="../html/menu.html">
                     Menu <img src={iconmenu} alt="" />
                   </a>
                   <ul className="menu_child1">
@@ -222,9 +213,9 @@ export default function Header() {
                   </ul>
                 </li>
                 <li className="has-child">
-                  <a className="menu-org" href="/housestory" target="_parent">
+                  <Link className="menu-org" to="/housestory">
                     Chuyện Nhà <img src={iconmenu} alt="" />
-                  </a>
+                  </Link>
                   <ul className="menu_child1">
                     <li className="lv2_title">
                       <a className="menu-org1" href="#" title="Coffeeholic">
@@ -297,20 +288,12 @@ export default function Header() {
                   </ul>
                 </li>
                 <li>
-                  <a
-                    className="menu-org"
-                    href="../html/cuahang.html"
-                    target="_parent"
-                  >
+                  <a className="menu-org" href="../html/cuahang.html">
                     Của hàng
                   </a>
                 </li>
                 <li>
-                  <a
-                    className="menu-org"
-                    href="../html/tuyendung.html"
-                    target="_parent"
-                  >
+                  <a className="menu-org" href="../html/tuyendung.html">
                     Tuyển dụng
                   </a>
                 </li>
