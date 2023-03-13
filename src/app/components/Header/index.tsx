@@ -35,7 +35,7 @@ export default function Header() {
           <div className="header-nav">
             <div className="header-logo">
               <h1 className="hidden">
-                <a href="../html/index.html" target="_parent">
+                <a href="/" target="_parent">
                   THE CO̲FFEE HO̲USE
                 </a>
               </h1>
@@ -43,11 +43,7 @@ export default function Header() {
             <div className="header-menu">
               <ul className="clearfix">
                 <li>
-                  <a
-                    className="menu-org"
-                    href="../html/caphe.html"
-                    target="_parent"
-                  >
+                  <a className="menu-org" href="/coffee" target="_parent">
                     Cà phê
                   </a>
                 </li>
@@ -226,11 +222,7 @@ export default function Header() {
                   </ul>
                 </li>
                 <li className="has-child">
-                  <a
-                    className="menu-org"
-                    href="../html/chuyennha.html"
-                    target="_parent"
-                  >
+                  <a className="menu-org" href="/housestory" target="_parent">
                     Chuyện Nhà <img src={iconmenu} alt="" />
                   </a>
                   <ul className="menu_child1">

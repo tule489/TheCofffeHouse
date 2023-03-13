@@ -33,8 +33,8 @@ export function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/" element={<Coffee />} />
-        <Route path="/" element={<HouseStory />} />
+        <Route path="/coffee" element={<Coffee />} />
+        <Route path="/housestory" element={<HouseStory />} />
         <Route path="/" element={<HomePage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
