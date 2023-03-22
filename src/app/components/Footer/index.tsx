@@ -11,6 +11,17 @@ import insta from './assets/insta.png';
 import iconshare from './assets/icon-share.png';
 import page from './assets/page.png';
 
+const btnhotline = document.getElementById('fixed-hotline-support');
+const modalcontent = document.querySelector('.modal-content');
+const modal = document.querySelector('.modal');
+const modalclose = document.querySelector('.js-modal-close');
+btnhotline?.addEventListener('click', () => modal?.classList.add('open'));
+modalclose?.addEventListener('click', () => modal?.classList.remove('open'));
+modal?.addEventListener('click', () => modal?.classList.remove('open'));
+modalcontent?.addEventListener('click', function (event) {
+  event.stopPropagation();
+});
+
 export default function Footer() {
   return (
     <>
@@ -127,7 +138,7 @@ export default function Footer() {
           </div>
         </div>
       </footer>
-      <a title="Hotline" href="#gef" id="fixed-hotline-support">
+      <a title="Hotline" id="fixed-hotline-support">
         <img src={support} />
       </a>
       <div className="modal">

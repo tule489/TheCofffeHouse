@@ -1,0 +1,55 @@
+.order{
+    width: 50%;
+    padding: 0 20px;
+    box-shadow: 0 -4px 10px rgba(0,0,0,.12);
+    border-radius: 10px;
+}
+.order-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;   
+    padding:10px 0;
+  
+}
+.order-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;   
+    padding:10px 0;
+    border-top-right-radius: 10px;
+
+}
+.thanhtien{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.phigiaohang{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.thanhtoan{
+    width: 108%;
+    display: flex;
+    justify-content: space-between;
+    margin:-20px;
+    align-items: center;
+    background-color: #fa8c16 ;
+    padding: 15px 0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+.padding010{
+    padding:10px 0;
+}
+.padding02010{
+    padding:20px 0 10px;
+}
+.padding01020{
+    padding:10px 0 20px ;
+}
+.text-orange{
+    color:#fa8c16
+}

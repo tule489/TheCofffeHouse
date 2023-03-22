@@ -10,3 +10,8 @@ body {
     color: #000;
     background: #fff;
 }
+.fa{
+    font-weight: 900;
+    width: 30px;
+    height: 30px;
+}

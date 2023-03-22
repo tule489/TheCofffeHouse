@@ -14,9 +14,13 @@ import { GlobalStyle } from 'styles/global-styles';
 
 import { Home } from './pages/Home/Loadable';
 import { Coffee } from './pages/Cafe/Loadable';
+import { Tea } from './pages/Tea/Loadable';
+import { Pay } from './pages/Pay/Loadable';
+import { Menu } from './pages/Menu/Loadable';
 import { HouseStory } from './pages/HouseStory/Loadable';
 import { HomePage } from './pages/HomePage/Loadable';
 import { NotFoundPage } from './components/NotFoundPage/Loadable';
+import { Recruits } from './pages/Recruitment';
 // import { useTranslation } from 'react-i18next';
 
 export function App() {
@@ -32,8 +36,12 @@ export function App() {
       </Helmet>
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<Home />} />
         <Route path="/" element={<Coffee />} />
+        <Route path="/" element={<Tea />} /> */}
+        <Route path="/" element={<Pay />} />
+        <Route path="/" element={<Menu />} />
+        <Route path="/" element={<Recruits />} />
         <Route path="/" element={<HouseStory />} />
         <Route path="/" element={<HomePage />} />
         <Route path="*" element={<NotFoundPage />} />
