@@ -1,11 +1,11 @@
-import * as React from 'react';
+import React from 'react';
 import './index.css';
 import { Helmet } from 'react-helmet-async';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Delivery from './components/Delivery';
 import Order from './components/Order';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export function Pay() {
   return (
     <>

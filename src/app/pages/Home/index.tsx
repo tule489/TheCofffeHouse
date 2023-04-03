@@ -1,7 +1,8 @@
-import * as React from 'react';
+import React from 'react';
+// import { withErrorBoundary } from 'react-error-boundary';
 import './index.css';
 import { Helmet } from 'react-helmet-async';
-import Header from '../../components/Header';
+import Header from '../../components/Header/index';
 import Footer from '../../components/Footer';
 import Product from './components/Products';
 import Healthy from './components/Healthy';

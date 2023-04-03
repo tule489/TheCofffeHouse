@@ -1,15 +1,16 @@
-/**
- * index.tsx
- *
- * This is the entry file for the application, only setup and boilerplate
- * code.
- */
+// /**
+//  * index.tsx
+//  *
+//  * This is the entry file for the application, only setup and boilerplate
+//  * code.
+//  */
 
 import 'react-app-polyfill/ie11';
 import 'react-app-polyfill/stable';
 
 import * as React from 'react';
 import ReactDOM from 'react-dom/client';
+import ReactDom from 'react-dom';
 import { Provider } from 'react-redux';
 
 // Use consistent styling
@@ -23,6 +24,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import { configureAppStore } from 'store/configureStore';
 
 import reportWebVitals from 'reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
 
 // Initialize languages
 import './locales/i18n';
@@ -36,7 +38,9 @@ root.render(
   <Provider store={store}>
     <HelmetProvider>
       <React.StrictMode>
+        {/* <BrowserRouter> */}
         <App />
+        {/* </BrowserRouter> */}
       </React.StrictMode>
     </HelmetProvider>
   </Provider>,
@@ -49,7 +53,13 @@ if (module.hot) {
   });
 }
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// // If you want to start measuring performance in your app, pass a function
+// // to log results (for example: reportWebVitals(console.log))
+// // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// reportWebVitals();
+/**
+ * index.tsx
+ *
+ * This is the entry file for the application, only setup and boilerplate
+ * code.
+ */

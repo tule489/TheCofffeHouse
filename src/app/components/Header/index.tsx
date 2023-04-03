@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './index.css';
 import img0 from './assets/0.png';
 import img1 from './assets/1.png';
@@ -35,39 +36,27 @@ export default function Header() {
           <div className="header-nav">
             <div className="header-logo">
               <h1 className="hidden">
-                <a href="../html/index.html" target="_parent">
+                <Link to="/" target="_parent">
                   THE CO̲FFEE HO̲USE
-                </a>
+                </Link>
               </h1>
             </div>
             <div className="header-menu">
               <ul className="clearfix">
                 <li>
-                  <a
-                    className="menu-org"
-                    href="../html/caphe.html"
-                    target="_parent"
-                  >
+                  <Link className="menu-org" to="/Coffee" target="_parent">
                     Cà phê
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    className="menu-org"
-                    href="../html/tra.html "
-                    target="_parent"
-                  >
+                  <Link className="menu-org" to="/Tea " target="_parent">
                     Trà
-                  </a>
+                  </Link>
                 </li>
                 <li className="has-child">
-                  <a
-                    className="menu-org"
-                    href="../html/menu.html"
-                    target="_parent"
-                  >
+                  <Link className="menu-org" to="/Menu" target="_parent">
                     Menu <img src={iconmenu} alt="" />
-                  </a>
+                  </Link>
                   <ul className="menu_child1">
                     <li className="lv2_title">
                       <a className="menu-org1" href="#" title="Tất cả">
@@ -122,9 +111,9 @@ export default function Header() {
                       </ul>
                     </li>
                     <li className="lv2_title">
-                      <a className="menu-org1" href="#" title="Trà">
+                      <Link className="menu-org1" to="/Tea" title="Trà">
                         Trà
-                      </a>
+                      </Link>
                       <ul className="menu_child_lv3">
                         <li className="lv3_title">
                           <a
@@ -226,13 +215,9 @@ export default function Header() {
                   </ul>
                 </li>
                 <li className="has-child">
-                  <a
-                    className="menu-org"
-                    href="../html/chuyennha.html"
-                    target="_parent"
-                  >
+                  <Link className="menu-org" to="/HouseStory" target="_parent">
                     Chuyện Nhà <img src={iconmenu} alt="" />
-                  </a>
+                  </Link>
                   <ul className="menu_child1">
                     <li className="lv2_title">
                       <a className="menu-org1" href="#" title="Coffeeholic">
@@ -314,13 +299,9 @@ export default function Header() {
                   </a>
                 </li>
                 <li>
-                  <a
-                    className="menu-org"
-                    href="../html/tuyendung.html"
-                    target="_parent"
-                  >
+                  <Link className="menu-org" to="/Recruits" target="_parent">
                     Tuyển dụng
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a className="menu-org" href="#">

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import './index.css';
 import { Helmet } from 'react-helmet-async';
 import Header from '../../components/Header';
@@ -34,10 +34,10 @@ export function Menu() {
     const getdata = async () => {
       try {
         const res = await axios.get(
-          'https://thecoffeehousebe-production.up.railway.app/api/v1/categories',
+          'https://thecoffeehousebe-production.up.railway.app/api/v1/categories/getAll',
         );
         const res1 = await axios.get(
-          'https://thecoffeehousebe-production.up.railway.app/api/v1/products',
+          'https://thecoffeehousebe-production.up.railway.app/api/v1/products/getAll',
         );
         // console.log(res.data);
         setCategories(res.data);
@@ -67,13 +67,13 @@ export function Menu() {
               <ProductCollection
                 categoryKey={categoryKey}
                 product={product}
-                setProductId={setProductId}
+                // setProductId={setProductId}
               />
             </div>
           </>
         ) : (
           <>
-            <Products productId={productId} product={product} />
+            <Products product={product} />
           </>
         )}
       </div>

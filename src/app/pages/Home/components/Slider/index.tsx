@@ -8,66 +8,65 @@ import img8 from './assets/8.png';
 import iconleft from './assets/icon-left.png';
 import iconright from './assets/icon-right.png';
 
-const imgnumber = document.querySelectorAll('.silder-content-top1 img');
-console.log(imgnumber);
-let index = 0;
-const leftbtn = document.querySelector('.slider-icon-left');
-const rightbtn = document.querySelector('.silder-icon-right');
-leftbtn?.addEventListener('click', function () {
-  index--;
-  if (index < 0) {
-    index = imgnumber.length - 1;
-  }
-  // document.querySelector('.silder-content-top1').style.right =
-  //   index * 100 + '%';
-  // window.scroll({
-  //   top: 0,
-  //   left: 100,
-  //   behavior: 'smooth',
-  // });
-  removeaction();
-  imgnumberli[index].classList.add('action');
-});
-rightbtn?.addEventListener('click', function () {
-  index++;
-  if (index > imgnumber.length - 1) {
-    index = 0;
-  }
-  // document.querySelector('.silder-content-top1').style.right =
-  //   index * 100 + '%';
-  removeaction();
-  imgnumberli[index].classList.add('action');
-});
+export default function Slider() {
+  const imgnumber = document.querySelectorAll('.silder-content-top1 img');
+  console.log(imgnumber);
+  let index = 0;
+  const leftbtn = document.querySelector('.slider-icon-left');
+  const rightbtn = document.querySelector('.silder-icon-right');
+  leftbtn?.addEventListener('click', function () {
+    index--;
+    if (index < 0) {
+      index = imgnumber.length - 1;
+    }
+    // document.querySelector('.silder-content-top1').style.right =
+    //   index * 100 + '%';
+    // window.scroll({
+    //   top: 0,
+    //   left: 100,
+    //   behavior: 'smooth',
+    // });
+    removeaction();
+    imgnumberli[index].classList.add('action');
+  });
+  rightbtn?.addEventListener('click', function () {
+    index++;
+    if (index > imgnumber.length - 1) {
+      index = 0;
+    }
+    // document.querySelector('.silder-content-top1').style.right =
+    //   index * 100 + '%';
+    removeaction();
+    imgnumberli[index].classList.add('action');
+  });
 
-const imgnumberli = document.querySelectorAll('.silder-content-bottom li');
-imgnumberli.forEach(function (image, index) {
-  image.addEventListener('click', function () {
+  const imgnumberli = document.querySelectorAll('.silder-content-bottom li');
+  imgnumberli.forEach(function (image, index) {
+    image.addEventListener('click', function () {
+      removeaction();
+      // document.querySelector('.silder-content-top1').style.right =
+      //   index * 100 + '%';
+      image.classList.add('action');
+    });
+  });
+  function removeaction() {
+    let imgaction = document.querySelector('.action');
+    imgaction?.classList.remove('action');
+  }
+  // setInterval(function(){
+  //     rightbtn.click()
+  // },4000)
+  function imgauto() {
+    index += 1;
+    if (index > imgnumber.length - 1) {
+      index = 0;
+    }
     removeaction();
     // document.querySelector('.silder-content-top1').style.right =
     //   index * 100 + '%';
-    image.classList.add('action');
-  });
-});
-function removeaction() {
-  let imgaction = document.querySelector('.action');
-  imgaction?.classList.remove('action');
-}
-// setInterval(function(){
-//     rightbtn.click()
-// },4000)
-function imgauto() {
-  index += 1;
-  if (index > imgnumber.length - 1) {
-    index = 0;
+    imgnumberli[index].classList.add('action');
   }
-  removeaction();
-  // document.querySelector('.silder-content-top1').style.right =
-  //   index * 100 + '%';
-  imgnumberli[index].classList.add('action');
-}
-setInterval(imgauto, 4000);
-
-export default function Product() {
+  setInterval(imgauto, 4000);
   return (
     <>
       <div id="slider">

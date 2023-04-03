@@ -15,161 +15,148 @@ export default function Coffee() {
     <>
       <div id="coffee">
         <div className="coffee-container">
-          <h3>Cà Phê Tại Nhà</h3>
+          <h3>Trà tại Nhà</h3>
           <div className="coffee-menu">
             <div className="coffee-item">
               <div className="menu-item">
-                <a href="../html/spcaphe.html">
-                  <img src={img5} alt="" />
+                <a href="#/">
+                  <img src={img5} alt="" />{' '}
                 </a>
               </div>
               <div className="menu_item_info">
                 <h3>
-                  <a
-                    href="../html/spcaphe.html"
-                    title="Cà Phê Rang Xay Original 1 250gr"
-                  >
-                    Cà Phê Rang Xay Original 1 250gr
+                  <a href="#" title="Giftset Trà Tearoma">
+                    Giftset Trà Tearoma
                   </a>
                 </h3>
-                <h4 className="original_price">49.000 đ</h4>
-                <del className="price_product_item ">59.000 đ</del>
+                <h4 className="original_price">169.000 đ</h4>
               </div>
             </div>
 
             <div className="coffee-item">
               <div className="menu-item">
-                <a href="#">
-                  <img src={img6} alt="" />
+                <a href="#/">
+                  <img src={img6} alt="" />{' '}
                 </a>
               </div>
               <div className="menu_item_info">
                 <h3>
-                  <a href="#" title="Cà Phê Hòa Tan Đậm Vị Việt Túi 40x16G">
-                    Cà Phê Hòa Tan Đậm Vị Việt Túi 40x16G
+                  <a href="#/" title="Trà Đào Túi Lọc Tearoma 20 x 2gr">
+                    Trà Đào Túi Lọc Tearoma 20 x 2gr
                   </a>
                 </h3>
-                <h4 className="original_price">79.000 đ</h4>
-                <del className="price_product_item ">98.000 đ</del>
+                <h4 className="original_price">28.000 đ</h4>
               </div>
             </div>
             <div className="coffee-item">
               <div className="menu-item">
-                <a href="#">
-                  <img src={img7} alt="" />
+                <a href="#/">
+                  <img src={img7} alt="" />{' '}
                 </a>
               </div>
               <div className="menu_item_info">
                 <h3>
-                  <a href="#" title="Cà Phê Sữa Đá Hòa Tan Hộp 10 gói">
-                    Cà Phê Sữa Đá Hòa Tan Hộp 10 gói
+                  <a href="#/" title="Trà Lài Túi Lọc Tearoma 20 x 2gr">
+                    Trà Lài Túi Lọc Tearoma 20 x 2gr
                   </a>
                 </h3>
-                <h4 className="original_price">39.000 đ</h4>
-                <del className="price_product_item ">44.000 đ</del>
+                <h4 className="original_price">28.000 đ</h4>
               </div>
             </div>
             <div className="coffee-item">
               <div className="menu-item">
-                <a href="#">
-                  <img src={img8} alt="" />
+                <a href="#/">
+                  <img src={img8} alt="" />{' '}
                 </a>
               </div>
               <div className="menu_item_info">
                 <h3>
-                  <a
-                    href="#"
-                    title="Cà Phê Sữa Đá Hòa Tan Đậm Vị Hộp 18 gói x 16gr"
-                  >
-                    Cà Phê Sữa Đá Hòa Tan Đậm Vị Hộp 18 gói x 16gr
+                  <a href="#/" title="Trà Oolong Túi Lọc Tearoma 20 x 2gr">
+                    Trà Oolong Túi Lọc Tearoma 20 x 2gr
                   </a>
                 </h3>
-                <h4 className="original_price">39.000 đ</h4>
-                <del className="price_product_item ">48.000 đ</del>
+                <h4 className="original_price">28.000 đ</h4>
               </div>
             </div>
             <div className="coffee-item">
               <div className="menu-item">
-                <a href="#">
-                  <img src={img9} alt="" />
+                <a href="#/">
+                  <img src={img9} alt="" />{' '}
                 </a>
               </div>
               <div className="menu_item_info">
                 <h3>
-                  <a href="#" title="Cà Phê Sữa Đá Hòa Tan Túi 25 x 22gr">
-                    Cà Phê Sữa Đá Hòa Tan Túi 25 x 22gr
+                  <a href="#/" title="Trà Sen Túi Lọc Tearoma 20 x 2gr">
+                    Trà Sen Túi Lọc Tearoma 20 x 2gr
                   </a>
                 </h3>
-                <h4 className="original_price">79.000 đ</h4>
-                <del className="price_product_item ">98.000 đ</del>
+                <h4 className="original_price">28.000 đ</h4>
               </div>
             </div>
             <div className="coffee-item">
               <div className="menu-item">
-                <a href="#">
-                  <img src={img10} alt="" />
+                <a href="#/">
+                  <img src={img10} alt="" />{' '}
                 </a>
               </div>
               <div className="menu_item_info">
                 <h3>
-                  <a href="#" title="Cà Phê Sữa Đá Hòa Tan Túi 25 x 22gr">
-                    Cà Phê Sữa Đá Hòa Tan Túi 25 x 22gr
+                  <a href="#/" title="Trà Xanh Lá Tearoma 100gr">
+                    Trà Xanh Lá Tearoma 100gr
                   </a>
                 </h3>
-                <h4 className="original_price">79.000 đ</h4>
-                <del className="price_product_item ">98.000 đ</del>
+                <h4 className="original_price">74.000 đ</h4>
               </div>
             </div>
             <div className="coffee-item">
               <div className="menu-item">
-                <a href="#">
+                <a href="#/">
                   {' '}
                   <img src={img11} alt="" />
                 </a>
               </div>
               <div className="menu_item_info">
                 <h3>
-                  <a href="#" title="Cà phê sữa đá pack 6 lon">
-                    Cà phê sữa đá pack 6 lon
+                  <a href="#/" title="Trà Sen Lá Tearoma 100gr">
+                    Trà Sen Lá Tearoma 100gr
                   </a>
                 </h3>
-                <h4 className="original_price">69.000 đ</h4>
-                <del className="price_product_item ">83.000 đ</del>
+                <h4 className="original_price">79.000 đ</h4>
               </div>
             </div>
             <div className="coffee-item">
               <div className="menu-item">
-                <a href="#">
-                  <img src={img12} alt="" />
+                <a href="#/">
+                  <img src={img12} alt="" />{' '}
                 </a>
               </div>
               <div className="menu_item_info">
                 <h3>
-                  <a href="#" title="Thùng 24 Lon Cà Phê Sữa Đá">
-                    Thùng 24 Lon Cà Phê Sữa Đá
+                  <a href="#" title="Trà Oolong Lá Tearoma 100gr">
+                    Trà Oolong Lá Tearoma 100gr
                   </a>
                 </h3>
-                <h4 className="original_price">269.000 đ</h4>
-                <del className="price_product_item ">330.000 đ</del>
+                <h4 className="original_price">98.000 đ</h4>
               </div>
             </div>
             <div className="coffee-item">
               <div className="menu-item">
-                <a href="#">
+                <a href="#/">
                   <img src={img13} alt="" />
                 </a>
               </div>
               <div className="menu_item_info">
                 <h3>
-                  <a href="#" title="Cà Phê Rang Xay Original 1 Túi 1KG">
+                  <a href="#/" title="Cà Phê Rang Xay Original 1 Túi 1KG">
                     Cà Phê Rang Xay Original 1 Túi 1KG
                   </a>
                 </h3>
-                <div className="price_product_item">230.000 đ</div>
+                <h4 className="original_price">79.000 đ</h4>
               </div>
             </div>
           </div>
         </div>
+        <script src="../js/tra.js"></script>
       </div>
     </>
   );

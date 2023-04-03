@@ -11,8 +11,6 @@ import { Helmet } from 'react-helmet-async';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { GlobalStyle } from 'styles/global-styles';
-
-import { Home } from './pages/Home/Loadable';
 import { Coffee } from './pages/Cafe/Loadable';
 import { Tea } from './pages/Tea/Loadable';
 import { Pay } from './pages/Pay/Loadable';
@@ -21,6 +19,7 @@ import { HouseStory } from './pages/HouseStory/Loadable';
 import { HomePage } from './pages/HomePage/Loadable';
 import { NotFoundPage } from './components/NotFoundPage/Loadable';
 import { Recruits } from './pages/Recruitment';
+import { Home } from './pages/Home/Loadable';
 // import { useTranslation } from 'react-i18next';
 
 export function App() {
@@ -36,15 +35,15 @@ export function App() {
       </Helmet>
 
       <Routes>
-        {/* <Route path="/" element={<Home />} />
-        <Route path="/" element={<Coffee />} />
-        <Route path="/" element={<Tea />} /> */}
-        <Route path="/" element={<Pay />} />
-        <Route path="/" element={<Menu />} />
-        <Route path="/" element={<Recruits />} />
-        <Route path="/" element={<HouseStory />} />
-        <Route path="/" element={<HomePage />} />
-        <Route path="*" element={<NotFoundPage />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/Coffee" element={<Coffee />} />
+        <Route path="/Tea" element={<Tea />} />
+        <Route path="/Pay" element={<Pay />} />
+        <Route path="/Menu" element={<Menu />} />
+        <Route path="/HouseStory" element={<HouseStory />} />
+        <Route path="/Recruits" element={<Recruits />} />
+        {/* <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<NotFoundPage />} /> */}
       </Routes>
       <GlobalStyle />
     </BrowserRouter>
