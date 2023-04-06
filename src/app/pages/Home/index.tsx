@@ -9,6 +9,8 @@ import Healthy from './components/Healthy';
 import Address from './components/Address';
 import Story from './components/Story';
 import Slider from './components/Slider';
+import Slider2 from './components/Slider2';
+
 export function Home() {
   return (
     <>
@@ -18,6 +20,7 @@ export function Home() {
       </Helmet>
       <Header />
       <Slider />
+      {/* <Slider2 /> */}
       <Product />
       <Healthy />
       <Address />

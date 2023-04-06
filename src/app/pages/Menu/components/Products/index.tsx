@@ -1,19 +1,10 @@
 import React from 'react';
 import './index.css';
-import img5 from './assets/5.png';
-import img6 from './assets/6.png';
-import img7 from './assets/7.png';
-import img8 from './assets/8.png';
-import img9 from './assets/9.png';
-import img10 from './assets/10.png';
-import img11 from './assets/11.png';
-import img12 from './assets/12.png';
-import img13 from './assets/13.png';
+
 // import axios from './axios';
 export default function Product(props) {
-  const productFitered = props.product.filter(
-    e => e.products.id === props.setProductId,
-  );
+  const productFitered = props.product.filter(e => e.id === props.ProductKey);
+  console.log(productFitered);
   return (
     <>
       {productFitered.map(product => {
@@ -71,10 +62,10 @@ export default function Product(props) {
             </div>
             <div className="body-content-right">
               <div className="body-content-right-top">
-                <h1>Cà Phê Rang Xay Original 1 250gr</h1>
+                <h1>{product.name}</h1>
                 <div className="product_price">
                   <span className="price" data-price="49000">
-                    49.000 đ
+                    {product.price}
                   </span>
                   <del className="price_original">59.000 đ</del>
                   <span className="sale_percent">17% giảm</span>

@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import './index.css';
 import { Helmet } from 'react-helmet-async';
 import Header from '../../components/Header';
@@ -9,25 +9,35 @@ import Footer from '../../components/Footer';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-interface catergory {
-  id?: string;
+interface category {
   name?: string;
+  id?: string;
+  isOpen?: boolean;
 }
 
 interface Product {
   id?: string;
   name?: string;
-  categoryId?: string;
+  detailedCategoryId?: string;
   price?: string;
   image?: string;
   description?: string;
 }
 
+interface DetailedCategory {
+  id?: string;
+  categoryId?: string;
+  name?: string;
+}
+
 export function Menu() {
-  const [categoryKey, setcategoryKey] = useState();
+  const [DetailcategoryKey, setDetailCategoryKey] = useState();
   const [productKey, setProductKey] = useState();
-  const [categories, setCategories] = useState<catergory[]>([]);
-  const [product, setproduct] = useState<Product[]>([]);
+  const [categories, setCategories] = useState<category[]>([]);
+  const [detailedCategory, setDetailedCategory] = useState<DetailedCategory[]>(
+    [],
+  );
+  const [product, setProduct] = useState<Product[]>([]);
   const [productId, setProductId] = useState(-1);
 
   useEffect(() => {
@@ -37,11 +47,18 @@ export function Menu() {
           'https://thecoffeehousebe-production.up.railway.app/api/v1/categories/getAll',
         );
         const res1 = await axios.get(
+          'https://thecoffeehousebe-production.up.railway.app/api/v1/detailedCategories/getAll',
+        );
+        const res2 = await axios.get(
           'https://thecoffeehousebe-production.up.railway.app/api/v1/products/getAll',
         );
-        // console.log(res.data);
-        setCategories(res.data);
-        setproduct(res1.data);
+        const categoryData: category[] = res.data;
+        categoryData.map(e => {
+          e.isOpen = false;
+        });
+        setCategories(categoryData);
+        setDetailedCategory(res1.data);
+        setProduct(res2.data);
       } catch (error) {
         console.log(error);
       }
@@ -61,19 +78,25 @@ export function Menu() {
           <>
             <div className="collection-warp">
               <MenuCollection
-                setCategoryKey={setcategoryKey}
+                setDetailCategoryKey={setDetailCategoryKey}
                 categories={categories}
+                detailedCategory={detailedCategory}
               />
               <ProductCollection
-                categoryKey={categoryKey}
+                detailcategoryKey={DetailcategoryKey}
+                detailedCategory={detailedCategory}
                 product={product}
-                // setProductId={setProductId}
+                setproductKey={setProductKey}
               />
             </div>
           </>
         ) : (
           <>
-            <Products product={product} />
+            <Products
+              productId={productId}
+              product={product}
+              ProductKey={productKey}
+            />
           </>
         )}
       </div>

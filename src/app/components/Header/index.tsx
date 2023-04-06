@@ -12,19 +12,19 @@ export default function Header() {
       <div className="top-bar">
         <div className="container-top-bar">
           <div>
-            <a href="#">
+            <a>
               <img src={img1} alt="" />
               <span>154 Cửa hàng khắp cả nước</span>
             </a>
           </div>
           <div>
-            <a href="#">
+            <a>
               <img src={img2} alt="" />
               <span>Đặt hàng: 1800.6936</span>
             </a>
           </div>
           <div>
-            <a href="#">
+            <a>
               <img src={img3} alt="" />
               <span>Freeship từ 50.000vnd</span>
             </a>
@@ -59,52 +59,44 @@ export default function Header() {
                   </Link>
                   <ul className="menu_child1">
                     <li className="lv2_title">
-                      <a className="menu-org1" href="#" title="Tất cả">
+                      <a className="menu-org1" title="Tất cả">
                         Tất cả
                       </a>
                     </li>
                     <li className="lv2_title">
-                      <a className="menu-org1" href="#" title="Hi-Tea Healthy">
+                      <a className="menu-org1" title="Hi-Tea Healthy">
                         Hi-Tea Healthy
                       </a>
                       <ul className="menu_child_lv3">
                         <li className="lv3_title">
-                          <a className="menu-org2" href="#" title="Hi-Tea Trà">
+                          <a className="menu-org2" title="Hi-Tea Trà">
                             Hi-Tea Trà
                           </a>
                         </li>
                         <li className="lv3_title">
-                          <a
-                            className="menu-org2"
-                            href="#"
-                            title="Hi-Tea Đá Tuyết"
-                          >
+                          <a className="menu-org2" title="Hi-Tea Đá Tuyết">
                             Hi-Tea Đá Tuyết
                           </a>
                         </li>
                       </ul>
                     </li>
                     <li className="lv2_title">
-                      <a className="menu-org1" href="#" title="Cà Phê">
+                      <a className="menu-org1" title="Cà Phê">
                         Cà Phê
                       </a>
                       <ul className="menu_child_lv3">
                         <li className="lv3_title">
-                          <a
-                            className="menu-org2"
-                            href="#"
-                            title="Cà Phê Việt Nam"
-                          >
+                          <a className="menu-org2" title="Cà Phê Việt Nam">
                             Cà Phê Việt Nam
                           </a>
                         </li>
                         <li className="lv3_title">
-                          <a className="menu-org2" href="#" title="Cà Phê Máy">
+                          <a className="menu-org2" title="Cà Phê Máy">
                             Cà Phê Máy
                           </a>
                         </li>
                         <li className="lv3_title">
-                          <a className="menu-org2" href="#" title="Cold Brew">
+                          <a className="menu-org2" title="Cold Brew">
                             Cold Brew
                           </a>
                         </li>
@@ -116,97 +108,73 @@ export default function Header() {
                       </Link>
                       <ul className="menu_child_lv3">
                         <li className="lv3_title">
-                          <a
-                            className="menu-org2"
-                            href="#"
-                            title="Trà trái cây"
-                          >
+                          <a className="menu-org2" title="Trà trái cây">
                             Trà trái cây
                           </a>
                         </li>
                         <li className="lv3_title">
-                          <a
-                            className="menu-org2"
-                            href="#"
-                            title="Trà sữa Macchiato"
-                          >
+                          <a className="menu-org2" title="Trà sữa Macchiato">
                             Trà sữa Macchiato
                           </a>
                         </li>
                       </ul>
                     </li>
                     <li className="lv2_title">
-                      <a className="menu-org1" href="#" title="Món khác">
+                      <a className="menu-org1" title="Món khác">
                         Món khác
                       </a>
                       <ul className="menu_child_lv3">
                         <li className="lv3_title">
-                          <a className="menu-org2" href="#" title="Đá xay">
+                          <a className="menu-org2" title="Đá xay">
                             Đá xay
                           </a>
                         </li>
                         <li className="lv3_title">
-                          <a
-                            className="menu-org2"
-                            href="#"
-                            title="Matcha - Sô cô la"
-                          >
+                          <a className="menu-org2" title="Matcha - Sô cô la">
                             Matcha - Sô cô la
                           </a>
                         </li>
                       </ul>
                     </li>
                     <li className="lv2_title">
-                      <a
-                        className="menu-org1"
-                        href="#"
-                        title="Bánh &amp; Snack"
-                      >
+                      <a className="menu-org1" title="Bánh &amp; Snack">
                         Bánh &amp; Snack
                       </a>
                       <ul className="menu_child_lv3">
                         <li className="lv3_title">
-                          <a className="menu-org2" href="#" title="Bánh mặn">
+                          <a className="menu-org2" title="Bánh mặn">
                             Bánh mặn
                           </a>
                         </li>
                         <li className="lv3_title">
-                          <a className="menu-org2" href="#" title="Bánh ngọt">
+                          <a className="menu-org2" title="Bánh ngọt">
                             Bánh ngọt
                           </a>
                         </li>
                         <li className="lv3_title">
-                          <a className="menu-org2" href="#" title="Snack">
+                          <a className="menu-org2" title="Snack">
                             Snack
                           </a>
                         </li>
                       </ul>
                     </li>
                     <li className="lv2_title">
-                      <a className="menu-org1" href="#" title="Tại nhà">
+                      <a className="menu-org1" title="Tại nhà">
                         Tại nhà
                       </a>
                       <ul className="menu_child_lv3">
                         <li className="lv3_title">
-                          <a
-                            className="menu-org2"
-                            href="#"
-                            title="Cà phê tại nhà"
-                          >
+                          <a className="menu-org2" title="Cà phê tại nhà">
                             Cà phê tại nhà
                           </a>
                         </li>
                         <li className="lv3_title">
-                          <a className="menu-org2" href="#" title="Trà tại nhà">
+                          <a className="menu-org2" title="Trà tại nhà">
                             Trà tại nhà
                           </a>
                         </li>
                         <li className="lv3_title">
-                          <a
-                            className="menu-org2"
-                            href="#"
-                            title="Bộ sưu tập quà tặng"
-                          >
+                          <a className="menu-org2" title="Bộ sưu tập quà tặng">
                             Bộ sưu tập quà tặng
                           </a>
                         </li>
@@ -220,68 +188,56 @@ export default function Header() {
                   </Link>
                   <ul className="menu_child1">
                     <li className="lv2_title">
-                      <a className="menu-org1" href="#" title="Coffeeholic">
+                      <a className="menu-org1" title="Coffeeholic">
                         Coffeeholic
                       </a>
                       <ul className="menu_child_lv3">
                         <li className="lv3_title">
-                          <a
-                            className="menu-org2"
-                            href="#"
-                            title="Chuyện Cà Phê"
-                          >
+                          <a className="menu-org2" title="Chuyện Cà Phê">
                             #chuyencaphe
                           </a>
                         </li>
                         <li className="lv3_title">
-                          <a className="menu-org2" href="#" title="Pha Cà Phê">
+                          <a className="menu-org2" title="Pha Cà Phê">
                             #phacaphe
                           </a>
                         </li>
                       </ul>
                     </li>
                     <li className="lv2_title">
-                      <a className="menu-org1" href="#" title="Teaholic">
+                      <a className="menu-org1" title="Teaholic">
                         Teaholic
                       </a>
                       <ul className="menu_child_lv3">
                         <li className="lv3_title">
-                          <a className="menu-org2" href="#" title="Pha Trà">
+                          <a className="menu-org2" title="Pha Trà">
                             #phatra
                           </a>
                         </li>
                         <li className="lv3_title">
-                          <a
-                            className="menu-org2"
-                            href="#"
-                            title="Câu chuyện về trà"
-                          >
+                          <a className="menu-org2" title="Câu chuyện về trà">
                             #cauchuyenvetra
                           </a>
                         </li>
                       </ul>
                     </li>
                     <li className="lv2_title">
-                      <a className="menu-org1" href="#" title="Blog">
+                      <a className="menu-org1" title="Blog">
                         Blog
                       </a>
                       <ul className="menu_child_lv3">
                         <li className="lv3_title">
-                          <a className="menu-org2" href="#" title="In The Mood">
+                          <a className="menu-org2" title="In The Mood">
                             #inthemood
                           </a>
                         </li>
                         <li className="lv3_title">
-                          <a className="menu-org2" href="#" title="Review">
+                          <a className="menu-org2" title="Review">
                             #Review
                           </a>
                         </li>
                         <li className="lv3_title">
-                          <a
-                            className="menu-org2"
-                            href="#"
-                            title="Human of TCH"
-                          >
+                          <a className="menu-org2" title="Human of TCH">
                             #HumanofTCH
                           </a>
                         </li>
@@ -304,9 +260,7 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
-                  <a className="menu-org" href="#">
-                    Khai Trương Nhà Mới
-                  </a>
+                  <a className="menu-org">Khai Trương Nhà Mới</a>
                 </li>
               </ul>
             </div>

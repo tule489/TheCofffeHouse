@@ -1,0 +1,403 @@
+{
+  "home": {
+    "title": "Trang chủ"
+  },
+  "about": {
+    "title": "Về chúng tôi"
+  },
+  "product": {
+    "title": "Sản phẩm"
+  },
+  "recruit": {
+    "title": "Tuyển dụng"
+  },
+  "buttonSeeMore": {
+    "title": "Xem thêm"
+  },
+  "slide1": {
+    "title": "Một lựa chọn cho các dự án quan trọng của bạn",
+    "content": "Tận dụng chuyên môn và khả năng của chúng tôi để đón đầu làn sóng kỹ thuật số và tận dụng các cơ hội phát triển kinh doanh"
+  },
+  "slide2": {
+    "title": "Cách nhanh nhất để đạt được mục tiêu kinh doanh của bạn",
+    "content": "Tận dụng chuyên môn và khả năng của chúng tôi để đón đầu làn sóng kỹ thuật số và tận dụng các cơ hội phát triển kinh doanh"
+  },
+  "slide3": {
+    "title": "Thiết lập trang web kinh doanh của bạn một cách nhanh chóng",
+    "content": "Tận dụng chuyên môn và khả năng của chúng tôi để đón đầu làn sóng kỹ thuật số và tận dụng các cơ hội phát triển kinh doanh"
+  },
+  "slide4": {
+    "title": "Các chức năng mạnh mẽ và các tuỳ chọn thiết thực",
+    "content": "Tận dụng chuyên môn và khả năng của chúng tôi để đón đầu làn sóng kỹ thuật số và tận dụng các cơ hội phát triển kinh doanh"
+  },
+  "visionContent": {
+    "title": "Tầm nhìn",
+    "content": "Vietdefi là nhà cung cấp giải pháp cho mọi sản phẩm lĩnh vực công nghệ thông tin.",
+    "content2": "Vietdefi định hướng trở thành chuyên gia sản xuất và hậu cần cho các sản phẩm công nghệ thông tin. Chúng tôi mang đến giải pháp sản xuất và hợp tác kinh doanh toàn diện cho khách hàng. Các bạn có ý tưởng chúng tôi sẵn sàng triển khai.",
+    "buttonTitle": "Đọc thêm"
+  },
+  "HomePage": {
+    "Product": {
+      "title": "Sản phẩm",
+      "content": "Chúng tôi có thế mạnh ở các sản phẩm mobile/web thuộc các lĩnh vực:",
+      "buttonDetail": "Chi tiết",
+      "titleCard1": "Edtech",
+      "contentCard1": "Công nghệ hỗ trợ giáo dục",
+      "titleCard2": "Fintech",
+      "contentCard2": "Công nghệ tài chính",
+      "titleCard3": "Booking",
+      "contentCard3": "Công nghệ hỗ trợ dịch vụ"
+    },
+    "Service": {
+      "title_ser": "Dịch vụ",
+      "content_ser": "VIETDEFI cung cấp các dịch vụ thiết kế UI/UX",
+      "detailImg1_ser": "Thiết kế giao diện người dùng UX cho các ứng dụng di động",
+      "detailImg2_ser": "Thiết kế giao diện người dùng UX cho trang web",
+      "detailImg3_ser": "Tư vấn và phát triển giao diện ứng dụng",
+      "detailImg4_ser": "Thiết kế cho hệ thống hoặc nền tảng"
+    },
+    "Introduce": {
+      "title": "Văn hóa của VIETDEFI",
+      "content": "Văn hóa được xây dựng dựa trên cơ sở con người là trung tâm, gồm 3 nội dung chính với mục tiêu làm cho các thành viên công ty hạnh phúc, gắn bó và cùng nhau phát triển.",
+      "item_1": "Tự tin là chính mình",
+      "item_2": "Chia sẻ và hỗ trợ",
+      "item_3": "Đoàn kết và tiến lên"
+    },
+
+    "Recruit": {
+      "title": "Tuyển dụng",
+      "content": "Chúng tôi luôn chào đón nhân tài trong lĩnh vực công nghệ thông tin ở mọi vị trí:",
+      "contact": "Hãy gửi CV ứng tuyển về địa chỉ email:"
+    }
+  },
+  "employees": {
+    "title": "ĐỘI NGŨ NHÂN VIÊN CHUYÊN NGHIỆP CAO",
+    "description": "Lĩnh vực công nghệ và kỹ thuật CNTT đội ngũ nhân viên chuyên nghiệp"
+  },
+  "companyInformation": {
+    "address": "Lô 6, khu Đô Thị Nam Thanh Ngõ 1 đường Nguyễn Thị Duệ, Yên Hòa, Cầu Giấy, Hà Nội",
+    "phoneNumber": "0392202429",
+    "email": "borostudio2018@gmail.com",
+    "company": "Công ty",
+    "aboutUs": "Về chúng tôi",
+    "product": "Sản phẩm",
+    "Service": "Dịch vụ",
+    "culture": "Văn hóa",
+    "recruit": "Tuyển dụng",
+    "technology": "Công nghệ",
+    "techEducation": "Edtech - Công nghệ hỗ trợ giáo dục",
+    "finance": "Fintech - Công nghệ hỗ trợ tài chính",
+    "booking": "Booking - Công nghệ hỗ trợ dịch vụ",
+    "signup": "Đăng ký bản tin và cập nhật tin tức",
+    "contact": "Liên hệ"
+  },
+  "positionName": {
+    "development": "Lập trình viên",
+    "businessAnalysis": "Quản lí phân tích",
+    "designer": "Thiết kế",
+    "generalManager": "Giám đốc VIETDEFI"
+  },
+  "aboutPage": {
+    "story": {
+      "title": "Chúng tôi là VIETDEFI",
+      "description": "Công ty TNHH VIETDEFI (viết tắt của Vietname Definition) được thành lập ngày 15/7/2021 tuy tuổi đời còn non trẻ nhưng có tiền thân là một đội nhóm hoạt động lâu năm trong lĩnh vực công nghệ thông tin. Xuất phát từ nhu cầu mở rộng quy mô và chuyên nghiệp hơn trong công việc chúng tôi đã quyết định thành lập công ty. Công ty chúng tôi chưa hẳn là công ty start-up vì chúng tôi chỉ tập trung vào khâu sản xuất và hậu cầu trong lĩnh vực IT. Bài toán kinh doanh sẽ hợp tác với các bên có tài chính, kinh nghiệm và chiến lược tốt. Chúng tôi không hẳn là công ty outsource vì sản phẩm làm ra không mua đứt bán đoạn mà hợp tác kinh doanh, chia sẻ lợi nhuận theo thực tế.",
+      "quote": "“Làm việc để sống , sống là phải hạnh phúc ”"
+    },
+    "mission": {
+      "title": "Sứ mệnh của chúng tôi",
+      "description": "Công ty hướng đến những sản phẩm áp dụng công nghệ thông tin để làm dễ dàng hơn cuộc sống của khách hàng. Chúng tôi tập trung tối đa vào việc xây dựng sản phẩm, cải thiện chất lượng, kiên nhẫn chờ đợi thị trường chấp nhận. Trung tâm của công ty là nhân sự và sản phẩm, chúng tôi ưu tiên mọi nguồn lực cho hai yếu tố cốt lõi trên. Tin tưởng rằng con người tốt tạo ra sản phẩm tốt nhất định sẽ thành công."
+    },
+    "coreValues": {
+      "title": "Giá trị cốt lõi",
+      "box1": {
+        "title": "Tâm thế của kẻ thắng không bao giờ thua",
+        "description": "Người thành công không bao giờ bỏ cuộc và người bỏ cuộc không bao giờ thành công. Tất nhiên là bạn có tạm dừng để nghỉ ngơi, chuyển hướng...nhưng không được từ bỏ.Tại VIETDEFI, những thử thách mới luôn là cơ hội để thử lòng dũng cảm và quyết tâm. Đội ngũ của công ty là những cá nhân quyết đoán, không ngại khó khăn, cùng nhau nỗ lực vượt qua những chướng ngại vật trên con đường phát triển sản phẩm cho thị trường. Tâm thế bất khuất và dũng cảm này là một trong những giá trị cốt lõi quan trọng nhất của mỗi người."
+      },
+      "box2": {
+        "title": "Tâm thế của người mới, không ngừng học hỏi",
+        "description": "Nếu trường học dạy bạn cần học giỏi ở mọi môn, cả tự nhiên lẫn xã hội, thì trường đời lại trao thưởng cực kỳ hậu hĩnh cho những kẻ đứng đầu, xuất chúng trong một lĩnh vực. Thì tại VIETDEFI bạn sẽ được học hỏi nhiều thứ từ những người đồng nghiệp và những dự án thực tế."
+      },
+      "box3": {
+        "title": "Tâm thế của kẻ thắng không bao giờ thua",
+        "description": "Rồi sẽ có lúc, bạn ngộ ra rằng không ai khác ngoài bạn, đơn độc làm chủ cái đầu của mình. Vậy nên, mọi thứ bạn nghĩ, mọi niềm tin bạn có, mọi việc bạn làm đến tận cùng đều là do bạn cả."
+      }
+    },
+    "benefit": {
+      "title": "Làm việc tại VIETDEFI",
+      "box1": {
+        "title": "Môi trường làm việc hiệu quả",
+        "description": "Chúng tôi cung cấp một không gian rộng rãi, tràn đầy ánh sáng tự nhiên và thiết bị hiện đại. Tất cả nhằm giúp bạn thoải mái sáng tạo."
+      },
+      "box2": {
+        "title": "Mức lương và thưởng hấp dẫn",
+        "description": "Chúng tôi đã chuẩn bị đủ nguồn lực tài chính để hoạt động trong ít nhất 5 năm tới. Chúng tôi không vội vàng tạo ra lợi nhuận, nhưng sẽ luôn lựa chọn những bước đi an toàn về tài chính."
+      },
+      "box3": {
+        "title": "Cơ hội phát triển",
+        "description": "Những con người ở đây luôn có  khả năng tư duy sáng tạo, linh hoạt xử lí vấn đề, nhận thức chính xác mục tiêu để giải quyết công việc dễ dàng nhất"
+      }
+    },
+    "joining": {
+      "title": "Hãy cùng nhau tạo giá trị để đời",
+      "description": "Trở thành phần của gia đình VIETDEFI để tao ra nhưng sản phẩm tuyệt vời và gặp gỡ những người đông nghiệp vui vẻ nào",
+      "buttonJoin": "Gia nhập VIETDEFI"
+    },
+    "Recruit": {
+      "HeaderPosition": {
+        "Title": "Tham gia cùng chúng tôi",
+        "Content": "Chúng tôi không quan tâm lắm đến kinh nghiệm vốn có của bạn. Điều quan trọng là bạn có phải là người ham học hỏi, biết đứng dậy sau mỗi lần thất bại hay không. Làm việc tại VIETDEFI sẽ vất vả, nhưng những gì bạn nhận lại thì hoàn toàn xứng đáng."
+      },
+
+      "Position": {
+        "Title": "CÁC VỊ TRÍ TUYỂN DỤNG",
+        "MoreDetail": "Xem chi tiết",
+        "Footer_1": "Cánh cửa luôn rộng mở những tài năng trẻ. Nếu bạn cảm thấy mình phù hợp với giá trị công ty mang lại, hãy tự tin nộp hồ sơ về địa chỉ mail",
+        "Footer_2": "để cùng đồng hành với chúng tôi.",
+        "Back": "Quay lại trang tuyển dụng",
+        "Apply": "Ứng tuyển"
+      }
+    }
+  },
+  "Recruit": {
+    "HeaderPosition": {
+      "Title": "Tham gia cùng chúng tôi",
+      "Content": "Chúng tôi không quan tâm lắm đến kinh nghiệm vốn có của bạn. Điều quan trọng là bạn có phải là người ham học hỏi, biết đứng dậy sau mỗi lần thất bại hay không. Làm việc tại VIETDEFI sẽ vất vả, nhưng những gì bạn nhận lại thì hoàn toàn xứng đáng."
+    },
+    "Position": {
+      "Title": "CÁC VỊ TRÍ TUYỂN DỤNG",
+      "MoreDetail": "Xem chi tiết",
+      "Footer_1": "Cánh cửa luôn rộng mở những tài năng trẻ. Nếu bạn cảm thấy mình phù hợp với giá trị công ty mang lại, hãy tự tin nộp hồ sơ về địa chỉ mail",
+      "Footer_2": " để cùng đồng hành với chúng tôi.",
+      "Back": "Quay lại trang tuyển dụng",
+      "Apply": "Ứng tuyển",
+
+      "_2D_Artist": {
+        "JD": {
+          "Title": "Mô tả công việc",
+          "Line_1": "Vẽ UI và nhân vật cho game 2D",
+          "Line_2": "Các dòng game hyper casual, casual, board game, game cho trẻ em yêu cầu"
+        },
+        "Require": {
+          "Title": "Yêu cầu",
+          "Line_1": "Nếu chưa có kinh nghiệm sẽ được đào tạo",
+          "Line_2": "Ưu tiên kinh nghiệm vẽ GAME",
+          "Line_3": "Kĩ năng giao tiếp, trình bày, làm việc nhóm",
+          "Line_4": "Kĩ năng giải quyết vấn đề, sáng tạo",
+          "Line_5": "Tư duy sản phẩm",
+          "Line_6": "Hòa đồng vui vẻ"
+        },
+        "Interest": {
+          "Title": "Quyền lợi",
+          "Line_1": "Lương thỏa thuận theo kinh nghiệm làm việc",
+          "Line_2": "Intern: 3-5 triệu",
+          "Line_3": "Junior: 10-15 triệu",
+          "Line_4": "Senior: Từ 15 triệu",
+          "Line_5": "Cam kết lương tháng 13",
+          "Line_6": "Bảo hiểm theo quy định nhà nước",
+          "Line_7": "Các phúc lợi khác theo chế độ của công ty",
+          "Line_8": "Được hưởng hoa hồng tính theo lợi nhuận của dự án mang lại"
+        },
+        "Apply": {
+          "Title": "Ứng tuyển",
+          "Line_1": "Thông tin ứng tuyển gửi về địa chỉ ",
+          "Line_2": "Tiêu đề thư ghi rõ Ứng Tuyển Vị trí 2D Artist",
+          "Line_3": "Vui lòng gửi kèm portfolio hoặc cv"
+        },
+        "Location": {
+          "Title": "Địa điểm làm việc",
+          "Address": "Lô 6, ngõ 1 đường Nguyễn Thị Duệ, phường Yên Hòa, quận Cầu Giấy, Hà Nội"
+        }
+      },
+      "Designer": {
+        "JD": {
+          "Title": "Mô tả công việc",
+          "Line_1": "Thiết kế giao diện trên mobile và web cho các dự án",
+          "Line_2": "Thiết kế các hình ảnh hỗ trợ các hoạt động khác như marketing hay hoạt động nội bộ"
+        },
+        "Require": {
+          "Title": "Yêu cầu",
+          "Line_1": "Chấp nhận chưa có kinh nghiệm thiết kế UI/UX nhưng cần có kinh nghiệm trong việc thiết kế hình ảnh",
+          "Line_2": "Ưu tiên đã từng có kinh nghiệm làm UI/UX Designer",
+          "Line_3": "Nếu chưa có kinh nghiệm có thể được đào tạo trước khi nhận việc"
+        },
+        "Interest": {
+          "Title": "Quyền lợi",
+          "Line_1": "Lương thỏa thuận theo kinh nghiệm làm việc. Mức lương 10 - 12 triệu cho 1 năm kinh nghiệm, 12 - 15M cho 2 năm kinh nghiệm, 15 - 20M cho 3 năm kinh nghiệm và trên 20M cho từ 4 năm kinh nghiệm.",
+          "Line_2": "Cam kết lương tháng 13",
+          "Line_3": "Bảo hiểm theo quy định nhà nước",
+          "Line_4": "Các phúc lợi khác theo chế độ của công ty",
+          "Line_5": "Được hưởng hoa hồng tính theo lợi nhuận của dự án mang lại"
+        },
+        "Apply": {
+          "Title": "Ứng tuyển",
+          "Line_1": "Thông tin ứng tuyển gửi về địa chỉ ",
+          "Line_2": "Tiêu đề thư ghi rõ Ứng Tuyển Vị trí UI/UX Designer",
+          "Line_3": "Vui lòng gửi kèm portfolio hoặc cv"
+        },
+        "Location": {
+          "Title": "Địa điểm làm việc",
+          "Address": "Lô 6, ngõ 1 đường Nguyễn Thị Duệ, phường Yên Hòa, quận Cầu Giấy, Hà Nội"
+        }
+      },
+      "Project_Management": {
+        "JD": {
+          "Title": "Mô tả công việc",
+          "Line_1": "Nghiên cứu thị trường định hướng sản phẩm",
+          "Line_2": "Lên ý tưởng, chức năng cho sản phẩm",
+          "Line_3": "Xây dựng tài liệu phối hợp với PM và DEV để hoàn thành công việc",
+          "Line_4": "Sản phẩm chủ yếu trong 3 lĩnh vực, Edtech, Fintech và Booking"
+        },
+        "Require": {
+          "Title": "Yêu cầu",
+          "Line_1": "Có tư duy về sản phẩm",
+          "Line_2": "Kỹ năng giao tiếp, kỹ năng thuyết trình, kỹ năng giải quyết vấn đề và kỹ năng làm việc nhóm",
+          "Line_3": "Cần biết cơ bản figma",
+          "Line_4": "Lưu ý vị trí INTERN công việc cũng tương tự tuy nhiên chấp nhận chưa có kinh nghiệm và sẽ được hướng dẫn công việc",
+          "Line_5": "Nếu đang là sinh viên chấp nhận đi làm part-time"
+        },
+        "Interest": {
+          "Title": "Quyền lợi",
+          "Line_1": "Lương thỏa thuận theo kinh nghiệm làm việc.",
+          "Line_2": "Mức lương 10 - 12 triệu cho 1 năm kinh nghiệm, 12 - 15M cho 2 năm kinh nghiệm, 15 - 20M cho 3 năm kinh nghiệm và trên 20M cho từ 4 năm kinh nghiệm.",
+          "Line_3": "Cam kết lương tháng 13",
+          "Line_4": "Bảo hiểm theo quy định nhà nước",
+          "Line_5": "Các phúc lợi khác theo chế độ của công ty",
+          "Line_6": "Được hưởng hoa hồng tính theo lợi nhuận của dự án mang lại"
+        },
+        "Apply": {
+          "Title": "Ứng tuyển",
+          "Line_1": "Thông tin ứng tuyển gửi về địa chỉ ",
+          "Line_2": "Tiêu đề thư ghi rõ Ứng Tuyển Vị trí Project Management"
+        },
+        "Location": {
+          "Title": "Địa điểm làm việc",
+          "Address": "Lô 6, ngõ 1 đường Nguyễn Thị Duệ, phường Yên Hòa, quận Cầu Giấy, Hà Nội"
+        }
+      },
+      "Business_Analysis": {
+        "JD": {
+          "Title": "Mô tả công việc",
+          "Line_1": "Nghiên cứu thị trường định hướng sản phẩm",
+          "Line_2": "Lên ý tưởng, chức năng cho sản phẩm",
+          "Line_3": "Xây dựng tài liệu phối hợp với PM và DEV để hoàn thành công việc",
+          "Line_4": "Sản phẩm chủ yếu trong 3 lĩnh vực, Edtech, Fintech và Booking"
+        },
+        "Require": {
+          "Title": "Yêu cầu",
+          "Line_1": "Có tư duy về sản phẩm",
+          "Line_2": "Kỹ năng giao tiếp, kỹ năng thuyết trình, kỹ năng giải quyết vấn đề và kỹ năng làm việc nhóm",
+          "Line_3": "Cần biết cơ bản figma",
+          "Line_4": "Lưu ý vị trí INTERN công việc cũng tương tự tuy nhiên chấp nhận chưa có kinh nghiệm và sẽ được hướng dẫn công việc",
+          "Line_5": "Nếu đang là sinh viên chấp nhận đi làm part-time"
+        },
+        "Interest": {
+          "Title": "Quyền lợi",
+          "Line_1": "Lương thỏa thuận theo kinh nghiệm làm việc.",
+          "Line_2": "Mức lương 10 - 12 triệu cho 1 năm kinh nghiệm, 12 - 15M cho 2 năm kinh nghiệm, 15 - 20M cho 3 năm kinh nghiệm và trên 20M cho từ 4 năm kinh nghiệm.",
+          "Line_3": "Cam kết lương tháng 13",
+          "Line_4": "Bảo hiểm theo quy định nhà nước",
+          "Line_5": "Các phúc lợi khác theo chế độ của công ty",
+          "Line_6": "Được hưởng hoa hồng tính theo lợi nhuận của dự án mang lại"
+        },
+        "Apply": {
+          "Title": "Ứng tuyển",
+          "Line_1": "Thông tin ứng tuyển gửi về địa chỉ  ",
+          "Line_2": "Tiêu đề thư ghi rõ Ứng Tuyển Vị trí Business Analysis"
+        },
+        "Location": {
+          "Title": "Địa điểm làm việc",
+          "Address": "Lô 6, ngõ 1 đường Nguyễn Thị Duệ, phường Yên Hòa, quận Cầu Giấy, Hà Nội"
+        }
+      },
+      "Intern_Dev": {
+        "JD": {
+          "Title": "Mô tả công việc",
+          "Line_1": "Xây dựng sản phẩm trên nền tảng web/mobile",
+          "Line_2": "Đảm nhận công việc Front End hoặc Back End"
+        },
+        "Require": {
+          "Title": "Yêu cầu",
+          "Line_1": "Vị trí này không yêu cầu kinh nghiệm làm việc",
+          "Line_2": "Nếu là sinh viên chấp nhận làm việc part-time",
+          "Line_3": "Tư duy thuật toán logic tốt",
+          "Line_4": "Kỹ năng giao tiếp, kỹ năng thuyết trình, kỹ năng giải quyết vấn đề và kỹ năng làm việc nhóm",
+          "Line_5": "Có tư duy về sản phẩm"
+        },
+        "Development_roadmap": {
+          "Title": "Lộ trình phát triển",
+          "Line_1": "Intern (tối đa 3 tháng)",
+          "Line_2": "Fresher (tối đa 1 năm)",
+          "Line_3": "Junior (Sau vị trí Fresher)",
+          "Line_4": "Develop documents in collaboration with PM and DEV to get the job doneSenior (Sau vị trí Junior nhưng không giới hạn thời gian,chứng minh năng lực tốt sẽ được cất nhắc lên vị trí Senior mà không cần chờ đợi)",
+          "Line_5": "Chúng tôi không để các bạn lo lắng về đãi ngộ, các bạn chỉ cần tập trung vào công việc."
+        },
+        "Interest": {
+          "Title": "Quyền lợi",
+          "Line_1": "Mức lương 4 - 6 triệu cho Intern",
+          "Line_2": "Mức lương 10 - 20 triệu cho Fresher",
+          "Line_3": "Mức lương 20 - 25 triệu cho vị trí Junior",
+          "Line_4": "Mức lương 25 triệu trở lên cho vị trí Senior",
+          "Line_5": "Chúng tôi không để các bạn lo lắng về đãi ngộ, các bạn chỉ cần tập trung vào công việc.",
+          "Line_6": "Cam kết lương tháng 13",
+          "Line_7": "Bảo hiểm theo quy định nhà nước",
+          "Line_8": "Các phúc lợi khác theo chế độ của công ty",
+          "Line_9": "Được hưởng hoa hồng tính theo lợi nhuận của dự án mang lại"
+        },
+        "Apply": {
+          "Title": "Ứng tuyển",
+          "Line_1": "Thông tin ứng tuyển gửi về địa chỉ  ",
+          "Line_2": "Tiêu đề thư ghi rõ Ứng Tuyển Vị trí INTERN DEVELOPER",
+          "Line_3": "Vui lòng gửi kèm portfolio hoặc cv",
+          "Line_4": "Bước 1: Duyệt CV",
+          "Line_5": "Bước 2: Làm bài test về logic (online)",
+          "Line_6": "Bước 3: Phỏng vấn trực tiếp tại công ty",
+          "Line_7": "Bước 4: Nhận thư đề nghị làm việc",
+          "Line_8": "Lưu ý dù đậu hay trượt chúng tôi sẽ luôn cam kết có thông báo đến với các bạn và sẵn sàng chia sẻ các lí do (nếu có yêu cầu) trong trường hợp các bạn chưa phù hợp để làm việc tại công ty."
+        },
+        "Location": {
+          "Title": "Địa điểm làm việc",
+          "Address": "Lô 6, ngõ 1 đường Nguyễn Thị Duệ, phường Yên Hòa, quận Cầu Giấy, Hà Nội"
+        }
+      },
+      "Quality_Control": {
+        "JD": {
+          "Title": "Mô tả công việc",
+          "Line_1": "Quản lí chất lượng dự án và sản phẩm",
+          "Line_2": "Làm Test Plan, Test Case",
+          "Line_3": "Test sản phẩm, test api, test tài liệu BA, tài liệu thiết kế."
+        },
+        "Require": {
+          "Title": "Yêu cầu",
+          "Line_1": "Nếu chưa có kinh nghiệm sẽ được đào tạo",
+          "Line_2": "Ưu tiên kinh nghiệm vẽ test",
+          "Line_3": "Kĩ năng giao tiếp, trình bày, làm việc nhóm",
+          "Line_4": "Kĩ năng giải quyết vấn đề, sáng tạo",
+          "Line_5": "Tư duy sản phẩm",
+          "Line_6": "Hòa đồng vui vẻ"
+        },
+        "Interest": {
+          "Title": "Quyền lợi",
+          "Line_1": "Lương thỏa thuận theo kinh nghiệm làm việc",
+          "Line_2": "Intern: 3-5 triệu",
+          "Line_3": "Fresher: 8-10 triệu",
+          "Line_4": "Junior: 10-15 triệu",
+          "Line_5": "Senior: Từ 15 triệu",
+          "Line_6": "Cam kết lương tháng 13",
+          "Line_7": "Bảo hiểm theo quy định nhà nước",
+          "Line_8": "Các phúc lợi khác theo chế độ của công ty",
+          "Line_9": "Được hưởng hoa hồng tính theo lợi nhuận của dự án mang lại"
+        },
+        "Apply": {
+          "Title": "Ứng tuyển",
+          "Line_1": "Thông tin ứng tuyển gửi về địa chỉ ",
+          "Line_2": "Tiêu đề thư ghi rõ Ứng Tuyển Vị trí Quality Control",
+          "Line_3": "Vui lòng gửi kèm portfolio hoặc cv"
+        },
+        "Location": {
+          "Title": "Địa điểm làm việc",
+          "Address": "Lô 6, ngõ 1 đường Nguyễn Thị Duệ, phường Yên Hòa, quận Cầu Giấy, Hà Nội"
+        }
+      }
+    }
+  }
+}

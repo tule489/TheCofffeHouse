@@ -5,6 +5,7 @@ import axios from 'axios';
 import CategoryItem from './CategoryItem';
 
 export default function MenuCollection(props) {
+  const [change, setChange] = useState(false);
   // useEffect(() => {
   //   axios
   //     .get(
@@ -18,7 +19,6 @@ export default function MenuCollection(props) {
   //       console.log(error);
   //     });
   // }, []);
-
   return (
     <>
       <div className="collection-left">
@@ -30,12 +30,34 @@ export default function MenuCollection(props) {
               </li>
               {props.categories.map(category => {
                 return (
-                  <li
-                    style={{ padding: 5, marginLeft: 30, cursor: 'pointer' }}
-                    onClick={() => props.setCategoryKey(category.id)}
-                  >
-                    {category.name}
-                  </li>
+                  <>
+                    <li
+                      style={{ padding: 5, marginLeft: 30, cursor: 'pointer' }}
+                      onClick={() => {
+                        if (category.isOpen === false) category.isOpen = true;
+                        else category.isOpen = false;
+                        setChange(!change);
+                      }}
+                    >
+                      {category.name}
+                    </li>
+                    {category.isOpen &&
+                      props.detailedCategory.map(e => {
+                        if (e.categoryId === category.id)
+                          return (
+                            <li
+                              style={{
+                                padding: 5,
+                                marginLeft: 50,
+                                cursor: 'pointer',
+                              }}
+                              onClick={() => props.setDetailCategoryKey(e.id)}
+                            >
+                              {e.name}
+                            </li>
+                          );
+                      })}
+                  </>
                 );
               })}
             </ul>
