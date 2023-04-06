@@ -34,6 +34,7 @@
     flex:5;
     padding-left: 72px;
     padding-right:15px;
+    min-width: 1024px;
 }
 .collection-right-img-top img{
     width: 100%;

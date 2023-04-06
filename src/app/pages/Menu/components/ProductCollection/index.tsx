@@ -11,7 +11,7 @@ export default function ProductCollection(props) {
     e => e.id === props.detailcategoryKey,
     // e => e.detailedCategoryId === props.detailcategoryKey,
   );
-  console.log(DetailcategoryFitered);
+  // console.log(DetailcategoryFitered);
 
   // console.log(props.product);
   return (

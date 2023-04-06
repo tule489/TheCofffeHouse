@@ -1,4 +1,6 @@
-import React from 'react';
+import * as React from 'react';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './index.css';
 import img0 from './assets/0.png';
@@ -6,7 +8,42 @@ import img1 from './assets/1.png';
 import img2 from './assets/2.png';
 import img3 from './assets/3.png';
 import iconmenu from './assets/icon-menu.png';
+import ItemMenu from './components/ItemMenu';
+interface category {
+  name?: string;
+  id?: string;
+  isOpen?: boolean;
+}
+interface DetailedCategory {
+  id?: string;
+  categoryId?: string;
+  name?: string;
+}
 export default function Header() {
+  const [DetailcategoryKey, setDetailCategoryKey] = useState();
+  const [productKey, setProductKey] = useState();
+  const [categories, setCategories] = useState<category[]>([]);
+  const [detailedCategory, setDetailedCategory] = useState<DetailedCategory[]>(
+    [],
+  );
+  useEffect(() => {
+    const getdata = async () => {
+      try {
+        const res = await axios.get(
+          'https://thecoffeehousebe-production.up.railway.app/api/v1/categories/getAll',
+        );
+        const res1 = await axios.get(
+          'https://thecoffeehousebe-production.up.railway.app/api/v1/detailedCategories/getAll',
+        );
+
+        setCategories(res.data);
+        setDetailedCategory(res1.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getdata();
+  }, []);
   return (
     <>
       <div className="top-bar">
@@ -63,123 +100,10 @@ export default function Header() {
                         Tất cả
                       </a>
                     </li>
-                    <li className="lv2_title">
-                      <a className="menu-org1" title="Hi-Tea Healthy">
-                        Hi-Tea Healthy
-                      </a>
-                      <ul className="menu_child_lv3">
-                        <li className="lv3_title">
-                          <a className="menu-org2" title="Hi-Tea Trà">
-                            Hi-Tea Trà
-                          </a>
-                        </li>
-                        <li className="lv3_title">
-                          <a className="menu-org2" title="Hi-Tea Đá Tuyết">
-                            Hi-Tea Đá Tuyết
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="lv2_title">
-                      <a className="menu-org1" title="Cà Phê">
-                        Cà Phê
-                      </a>
-                      <ul className="menu_child_lv3">
-                        <li className="lv3_title">
-                          <a className="menu-org2" title="Cà Phê Việt Nam">
-                            Cà Phê Việt Nam
-                          </a>
-                        </li>
-                        <li className="lv3_title">
-                          <a className="menu-org2" title="Cà Phê Máy">
-                            Cà Phê Máy
-                          </a>
-                        </li>
-                        <li className="lv3_title">
-                          <a className="menu-org2" title="Cold Brew">
-                            Cold Brew
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="lv2_title">
-                      <Link className="menu-org1" to="/Tea" title="Trà">
-                        Trà
-                      </Link>
-                      <ul className="menu_child_lv3">
-                        <li className="lv3_title">
-                          <a className="menu-org2" title="Trà trái cây">
-                            Trà trái cây
-                          </a>
-                        </li>
-                        <li className="lv3_title">
-                          <a className="menu-org2" title="Trà sữa Macchiato">
-                            Trà sữa Macchiato
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="lv2_title">
-                      <a className="menu-org1" title="Món khác">
-                        Món khác
-                      </a>
-                      <ul className="menu_child_lv3">
-                        <li className="lv3_title">
-                          <a className="menu-org2" title="Đá xay">
-                            Đá xay
-                          </a>
-                        </li>
-                        <li className="lv3_title">
-                          <a className="menu-org2" title="Matcha - Sô cô la">
-                            Matcha - Sô cô la
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="lv2_title">
-                      <a className="menu-org1" title="Bánh &amp; Snack">
-                        Bánh &amp; Snack
-                      </a>
-                      <ul className="menu_child_lv3">
-                        <li className="lv3_title">
-                          <a className="menu-org2" title="Bánh mặn">
-                            Bánh mặn
-                          </a>
-                        </li>
-                        <li className="lv3_title">
-                          <a className="menu-org2" title="Bánh ngọt">
-                            Bánh ngọt
-                          </a>
-                        </li>
-                        <li className="lv3_title">
-                          <a className="menu-org2" title="Snack">
-                            Snack
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="lv2_title">
-                      <a className="menu-org1" title="Tại nhà">
-                        Tại nhà
-                      </a>
-                      <ul className="menu_child_lv3">
-                        <li className="lv3_title">
-                          <a className="menu-org2" title="Cà phê tại nhà">
-                            Cà phê tại nhà
-                          </a>
-                        </li>
-                        <li className="lv3_title">
-                          <a className="menu-org2" title="Trà tại nhà">
-                            Trà tại nhà
-                          </a>
-                        </li>
-                        <li className="lv3_title">
-                          <a className="menu-org2" title="Bộ sưu tập quà tặng">
-                            Bộ sưu tập quà tặng
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
+                    <ItemMenu
+                      categories={categories}
+                      detailedCategory={detailedCategory}
+                    />
                   </ul>
                 </li>
                 <li className="has-child">
@@ -246,13 +170,9 @@ export default function Header() {
                   </ul>
                 </li>
                 <li>
-                  <a
-                    className="menu-org"
-                    href="../html/cuahang.html"
-                    target="_parent"
-                  >
+                  <Link className="menu-org" to="/Store" target="_parent">
                     Của hàng
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <Link className="menu-org" to="/Recruits" target="_parent">

@@ -1,0 +1,40 @@
+.page-content{
+    width: 80%;
+    margin:auto;
+    padding: 40px 0 50px;
+    display:flex
+}
+.page_title{
+    margin-bottom: 16px;
+    font-size: 20px;
+}
+.filter_district{
+    margin-right: 16px;
+    padding: 8px 12px;
+    width: 40%;
+    max-width: unset;
+    border-radius: 8px;
+    border: 1px solid #00000026;
+    margin-bottom: 24px;
+}
+.page-content-left{
+    float: left;
+    width: 19.5%;
+    padding-right: 53px; 
+}
+.page-content-left-main> p {
+    padding-left: 15px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+}
+.page-content-left-main > ul{
+    padding-left: 15px;
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.page-content-left-main > ul > li{
+    margin-bottom: 16px;
+}

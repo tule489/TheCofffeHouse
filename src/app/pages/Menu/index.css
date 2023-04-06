@@ -10,3 +10,6 @@ body {
     color: #000;
     background: #fff;
 }
+.collection-warp{
+    min-height: 900px !important;
+}
