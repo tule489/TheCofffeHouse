@@ -18,7 +18,7 @@ export default function Product(props) {
               <div className="container">
                 <ul className="breadcrumb-arrow">
                   <li>
-                    <Link to="/HouseStory">Menu</Link>
+                    <Link to="/Menu">Menu</Link>
                     <span>/</span>
                   </li>
                   <li>

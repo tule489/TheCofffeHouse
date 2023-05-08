@@ -179,9 +179,6 @@ export default function Header() {
                     Tuyển dụng
                   </Link>
                 </li>
-                <li>
-                  <a className="menu-org">Khai Trương Nhà Mới</a>
-                </li>
               </ul>
             </div>
             {/* <div className="header-menu-right">
@@ -194,6 +191,9 @@ export default function Header() {
                 </ul>
               </span>
             </div> */}
+            <div className="header-menu-right">
+              <i className="header-menu-right-shop fa-solid fa-cart-shopping"></i>
+            </div>
           </div>
         </div>
       </header>
