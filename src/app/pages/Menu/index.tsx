@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import Header from '../../components/Header';
 import MenuCollection from './components/MenuCollection';
 import ProductCollection from './components/ProductCollection';
-import Products from './components/Products';
+import Products from '../../pages/Products';
 import Footer from '../../components/Footer';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -86,13 +86,14 @@ export function Menu() {
                 detailcategoryKey={DetailcategoryKey}
                 detailedCategory={detailedCategory}
                 product={product}
-                setproductKey={setProductKey}
+                setProductId={setProductId}
               />
             </div>
           </>
         ) : (
           <>
             <Products
+              categories={categories}
               productId={productId}
               product={product}
               ProductKey={productKey}

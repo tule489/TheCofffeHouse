@@ -1,5 +1,5 @@
 import React from 'react';
-import '../ProductCollection/index';
+import '../ProductCollection/index.css';
 
 // import axios from './axios';
 export default function ProductCollection(props) {
@@ -13,7 +13,6 @@ export default function ProductCollection(props) {
   );
   // console.log(DetailcategoryFitered);
 
-  // console.log(props.product);
   return (
     <>
       <div className="collection-right">
@@ -36,7 +35,7 @@ export default function ProductCollection(props) {
               return (
                 <div
                   className="coffee-item"
-                  onClick={() => props.setproductKey(product.id)}
+                  onClick={() => props.setProductId(product.id)}
                 >
                   <div className="menu-item">
                     <a>

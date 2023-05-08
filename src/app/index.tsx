@@ -21,6 +21,7 @@ import { NotFoundPage } from './components/NotFoundPage/Loadable';
 import { Recruits } from './pages/Recruitment';
 import { Home } from './pages/Home/Loadable';
 import { Store } from './pages/Store/Loadable';
+
 // import { useTranslation } from 'react-i18next';
 
 export function App() {

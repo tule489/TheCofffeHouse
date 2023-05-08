@@ -6,19 +6,7 @@ import CategoryItem from './CategoryItem';
 
 export default function MenuCollection(props) {
   const [change, setChange] = useState(false);
-  // useEffect(() => {
-  //   axios
-  //     .get(
-  //       'https://thecoffeehousebe-production.up.railway.app/api/v1/categories',
-  //     )
-  //     .then(res => {
-  //       setcategory(res.data.data);
-  //       console.log(res.data);
-  //     })
-  //     .catch(error => {
-  //       console.log(error);
-  //     });
-  // }, []);
+
   return (
     <>
       <div className="collection-left">
@@ -37,6 +25,7 @@ export default function MenuCollection(props) {
                         if (category.isOpen === false) category.isOpen = true;
                         else category.isOpen = false;
                         setChange(!change);
+                        props.setCategory(category.id);
                       }}
                     >
                       {category.name}
@@ -48,7 +37,7 @@ export default function MenuCollection(props) {
                             <li
                               style={{
                                 padding: 5,
-                                marginLeft: 50,
+                                marginLeft: 40,
                                 cursor: 'pointer',
                               }}
                               onClick={() => props.setDetailCategoryKey(e.id)}
