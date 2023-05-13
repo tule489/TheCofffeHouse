@@ -13,3 +13,7 @@ body {
 .collection-warp{
     min-height: 900px !important;
 }
+.collection{
+    min-height: 900px !important;
+
+}

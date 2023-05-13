@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './index.css';
 import support from './assets/support.png';
 import tichxanh from './assets/tichxanh.png';
@@ -11,18 +11,38 @@ import insta from './assets/insta.png';
 import iconshare from './assets/icon-share.png';
 import page from './assets/page.png';
 
-const btnhotline = document.getElementById('fixed-hotline-support');
-const modalcontent = document.querySelector('.modal-content');
-const modal = document.querySelector('.modal');
-const modalclose = document.querySelector('.js-modal-close');
-btnhotline?.addEventListener('click', () => modal?.classList.add('open'));
-modalclose?.addEventListener('click', () => modal?.classList.remove('open'));
-modal?.addEventListener('click', () => modal?.classList.remove('open'));
-modalcontent?.addEventListener('click', function (event) {
-  event.stopPropagation();
-});
-
 export default function Footer() {
+  const handleClick = () => {
+    const btnhotline = document.getElementById('fixed-hotline-support');
+    const modalcontent = document.querySelector('.modal-content');
+    const modal = document.querySelector('.modal');
+    const modalclose = document.querySelector('.js-modal-close');
+    btnhotline?.addEventListener('click', () => modal?.classList.add('open'));
+    modalclose?.addEventListener('click', () =>
+      modal?.classList.remove('open'),
+    );
+    modal?.addEventListener('click', () => modal?.classList.remove('open'));
+    modalcontent?.addEventListener('click', function (event) {
+      event.stopPropagation();
+    });
+  };
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const element1 = document.getElementById('btnhotline');
+  //     element1?.classList.add('open');
+  //   };
+
+  //   const addClassOnScroll = () => {
+  //     window.addEventListener('scroll', handleScroll);
+  //   };
+
+  //   addClassOnScroll();
+
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
   return (
     <>
       <footer id="footer">
@@ -138,7 +158,7 @@ export default function Footer() {
           </div>
         </div>
       </footer>
-      <a title="Hotline" id="fixed-hotline-support">
+      <a title="Hotline" id="fixed-hotline-support" onClick={handleClick}>
         <img src={support} />
       </a>
       <div className="modal">

@@ -6,19 +6,7 @@
 #slider img{
     width: 100%;
     height:100%;
-}
-.coffee-container{
-    width: 82%;
-    margin: auto;
-    padding-top: 40px;
-    padding-bottom: 50px;
-}
-.coffee-container> h3{
-    width: 100%;
-    margin: auto;
-    padding: 0 16px;
-    margin-bottom: 20px;
-    font-size:  24px;
+    object-fit: cover;
 }
 
 .slider-content {
@@ -97,6 +85,7 @@
     object-fit: cover;
     max-width: 100%;
     border-radius: 8px;
+    object-fit: cover;
 
 }
 .silder-content-bottom li.action{
@@ -122,6 +111,8 @@
     width: 100%;
     height: 100%;
     vertical-align: middle;
+    object-fit: cover;
+
 }
 .menu_item_info{
     padding-top: 12px;

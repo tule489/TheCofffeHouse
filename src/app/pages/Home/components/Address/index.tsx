@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './index.css';
 import img20 from './assets/20.png';
 import img25 from './assets/25.png';
@@ -12,7 +12,15 @@ import img32 from './assets/32.png';
 import img33 from './assets/33.png';
 import iconleft from './assets/icon-left.png';
 import iconright from './assets/icon-right.png';
+import { useState } from 'react';
 export default function Product() {
+  const [imagePosition, setImagePosition] = useState(0);
+
+  const handleLeftClick = () => {
+    const newPosition = imagePosition - 1;
+    setImagePosition(newPosition < 0 ? 0 : newPosition);
+  };
+
   return (
     <>
       <div id="addres">

@@ -8,6 +8,7 @@ import Products from '../../pages/Products';
 import Footer from '../../components/Footer';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import Loading from 'app/components/Loading';
 
 interface category {
   name?: string;
@@ -39,6 +40,7 @@ export function Menu() {
   );
   const [product, setProduct] = useState<Product[]>([]);
   const [productId, setProductId] = useState(-1);
+  const [loading, setloading] = useState(false);
 
   useEffect(() => {
     const getdata = async () => {
@@ -59,6 +61,7 @@ export function Menu() {
         setCategories(categoryData);
         setDetailedCategory(res1.data);
         setProduct(res2.data);
+        setloading(true);
       } catch (error) {
         console.log(error);
       }
@@ -76,19 +79,23 @@ export function Menu() {
       <div id="collection">
         {productId === -1 ? (
           <>
-            <div className="collection-warp">
-              <MenuCollection
-                setDetailCategoryKey={setDetailCategoryKey}
-                categories={categories}
-                detailedCategory={detailedCategory}
-              />
-              <ProductCollection
-                detailcategoryKey={DetailcategoryKey}
-                detailedCategory={detailedCategory}
-                product={product}
-                setProductId={setProductId}
-              />
-            </div>
+            {loading ? (
+              <div className="collection-warp">
+                <MenuCollection
+                  setDetailCategoryKey={setDetailCategoryKey}
+                  categories={categories}
+                  detailedCategory={detailedCategory}
+                />
+                <ProductCollection
+                  detailcategoryKey={DetailcategoryKey}
+                  detailedCategory={detailedCategory}
+                  product={product}
+                  setProductId={setProductId}
+                />
+              </div>
+            ) : (
+              <Loading />
+            )}
           </>
         ) : (
           <>
