@@ -19,8 +19,8 @@ export function Home() {
         <meta name="description" content="A Boilerplate application homepage" />
       </Helmet>
       <Header />
-      <Slider />
-      {/* <Slider2 /> */}
+      {/* <Slider /> */}
+      <Slider2 />
       <Product />
       <Healthy />
       <Address />

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import './index.css';
 import img0 from './assets/0.png';
 import img1 from './assets/1.png';
@@ -81,9 +81,9 @@ export default function Header() {
             <div className="header-menu">
               <ul className="clearfix">
                 <li>
-                  <Link className="menu-org" to="/Coffee" target="_parent">
+                  <NavLink className="menu-org" to="/Coffee" target="_parent">
                     Cà phê
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
                   <Link className="menu-org" to="/Tea " target="_parent">
@@ -91,9 +91,9 @@ export default function Header() {
                   </Link>
                 </li>
                 <li className="has-child">
-                  <Link className="menu-org" to="/Menu" target="_parent">
+                  <NavLink className="menu-org" to="/Menu" target="_parent">
                     Menu <img src={iconmenu} alt="" />
-                  </Link>
+                  </NavLink>
                   <ul className="menu_child1">
                     <li className="lv2_title">
                       <a className="menu-org1" title="Tất cả">
@@ -107,9 +107,13 @@ export default function Header() {
                   </ul>
                 </li>
                 <li className="has-child">
-                  <Link className="menu-org" to="/HouseStory" target="_parent">
+                  <NavLink
+                    className="menu-org"
+                    to="/HouseStory"
+                    target="_parent"
+                  >
                     Chuyện Nhà <img src={iconmenu} alt="" />
-                  </Link>
+                  </NavLink>
                   <ul className="menu_child1">
                     <li className="lv2_title">
                       <a className="menu-org1" title="Coffeeholic">
@@ -170,14 +174,14 @@ export default function Header() {
                   </ul>
                 </li>
                 <li>
-                  <Link className="menu-org" to="/Store" target="_parent">
+                  <NavLink className="menu-org" to="/Store" target="_parent">
                     Của hàng
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link className="menu-org" to="/Recruits" target="_parent">
+                  <NavLink className="menu-org" to="/Recruits" target="_parent">
                     Tuyển dụng
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
             </div>
@@ -192,7 +196,9 @@ export default function Header() {
               </span>
             </div> */}
             <div className="header-menu-right">
-              <i className="header-menu-right-shop fa-solid fa-cart-shopping"></i>
+              <NavLink className="menu-org" to="/Pay" target="_parent">
+                <i className="header-menu-right-shop fa-solid fa-cart-shopping"></i>
+              </NavLink>
             </div>
           </div>
         </div>

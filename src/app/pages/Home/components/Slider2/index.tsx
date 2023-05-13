@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
-
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import './index.css';
 import img4 from './assets/4.png';
 import img5 from './assets/5.png';
@@ -14,49 +15,29 @@ export default class SimpleSlider extends Component {
     const settings = {
       dots: true,
       infinite: true,
-      speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      responsive: [
-        {
-          breakpoint: 4080,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: true,
-          },
-        },
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            initialSlide: 1,
-          },
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-          },
-        },
-      ],
+      autoplay: true,
+      autoplaySpeed: 2000,
+      pauseOnHover: true,
     };
     return (
-      <Slider {...settings}>
-        <div>
-          <a href="#">
-            <img src={img4} alt="" />
-          </a>
+      <>
+        <div id="slider">
+          <Slider {...settings}>
+            <div>
+              <a href="#">
+                <img src={img4} alt="" />
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <img src={img5} alt="" />
+              </a>
+            </div>
+          </Slider>
         </div>
-        <div>
-          <a href="#">
-            <img src={img4} alt="" />
-          </a>
-        </div>
-      </Slider>
+      </>
     );
   }
 }
