@@ -8,7 +8,20 @@ export default function Product(props) {
   const categoryFitered = props.product.filter(
     e => e.detailedCategoryId === props.productId,
   );
+
   console.log(categoryFitered);
+
+  const onOrder = (productId: any): void => {
+    if (sessionStorage.getItem('productId')) {
+      sessionStorage.setItem(
+        'productId',
+        sessionStorage.getItem('productId') + `,${productId}`,
+      );
+    } else {
+      sessionStorage.setItem('productId', productId);
+    }
+  };
+
   return (
     <>
       {productFitered.map(product => {
@@ -91,19 +104,8 @@ export default function Product(props) {
                 <div className="body-content-right-bottom">
                   <ul className="order_methods">
                     <li className="">
-                      <a href="#">
+                      <a href="/Pay" onClick={() => onOrder(product.id)}>
                         <span>Đặt giao tận nơi</span>
-                      </a>
-                    </li>
-
-                    <li className="">
-                      <a target="_blank" href="../html/cuahang.html">
-                        <span>Mua tại cửa hàng</span>
-                      </a>
-                    </li>
-                    <li className="take_away">
-                      <a href="#">
-                        <span>Mua mang đi</span>
                       </a>
                     </li>
                   </ul>

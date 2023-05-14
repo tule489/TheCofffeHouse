@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './index.css';
 import { Helmet } from 'react-helmet-async';
 import Header from '../../components/Header';
@@ -7,6 +7,18 @@ import Delivery from './components/Delivery';
 import Order from './components/Order';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export function Pay() {
+  const [customerName, setCustomerName] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [deliveryAddress, setDeliveryAddress] = useState('');
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [deliveryPrice, setDeliveryPrice] = useState();
+
+  useEffect(() => {
+    setCustomerName('');
+    setPhoneNumber('');
+    setDeliveryAddress('');
+  }, [isSuccess]);
+
   return (
     <>
       <Helmet>
@@ -27,8 +39,23 @@ export function Pay() {
           </h3>
         </div>
         <div style={{ width: '70%', margin: 'auto', display: 'flex' }}>
-          <Delivery />
-          <Order />
+          <Delivery
+            customerName={customerName}
+            setCustomerName={setCustomerName}
+            phoneNumber={phoneNumber}
+            setPhoneNumber={setPhoneNumber}
+            deliveryAddress={deliveryAddress}
+            setDeliveryAddress={setDeliveryAddress}
+            deliveryPrice={deliveryPrice}
+            setDeliveryPrice={setDeliveryPrice}
+          />
+          <Order
+            customerName={customerName}
+            phoneNumber={phoneNumber}
+            deliveryAddress={deliveryAddress}
+            isSuccess={isSuccess}
+            setIsSuccess={setIsSuccess}
+          />
         </div>
       </div>
       <Footer />
