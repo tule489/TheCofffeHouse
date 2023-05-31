@@ -454,7 +454,7 @@ export default function Coffee(props: any) {
           </div>
           <div className="form-group">
             <input
-              type="text"
+              type="number"
               id="name"
               autoComplete="off"
               placeholder="Số điện thoại"

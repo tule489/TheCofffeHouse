@@ -3,9 +3,22 @@ import './index.css';
 import axios from 'axios';
 import { API_END_POINT } from 'environment';
 import tickXanh from './assets/tich-xanh.png';
+import Stack from '@mui/material/Stack';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert, { AlertProps } from '@mui/material/Alert';
+
+const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
+  props,
+  ref,
+) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
 
 export default function Coffee(props: any) {
   const [productsSelected, setProductsSelected] = useState([]);
+  const [open, setOpen] = useState(false);
+
+  console.log(props.deliveryPrice);
 
   const onDeleteItem = (key: any) => {
     let list = sessionStorage.getItem('productId')?.split(',');
@@ -38,30 +51,39 @@ export default function Coffee(props: any) {
   };
 
   const onOrder = async () => {
-    const date = new Date();
+    if (
+      props.customerName !== '' &&
+      props.phoneNumber !== '' &&
+      props.deliveryAddress !== '' &&
+      sessionStorage.getItem('productId')
+    ) {
+      const date = new Date();
 
-    await axios
-      .post(`${API_END_POINT}/api/v1/orders/addOrder`, {
-        customerName: props.customerName,
-        deliveryAddress: props.deliveryAddress,
-        phoneNumber: props.phoneNumber,
-        day: date.getDate(),
-        month: date.getMonth() + 1,
-        year: date.getFullYear(),
-        time: date.toLocaleTimeString('vi-VN'),
-        totalMoney:
-          productsSelected.reduce(
-            (total: number, product: any) =>
-              total + Number(product.price) * 1000,
-            0,
-          ) + Number(props.deliveryPrice),
-        status: 'Đang chuẩn bị',
-      })
-      .then(() => {
-        props.setIsSuccess(true);
-        sessionStorage.clear();
-      });
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+      await axios
+        .post(`${API_END_POINT}/api/v1/orders/addOrder`, {
+          customerName: props.customerName,
+          deliveryAddress: props.deliveryAddress,
+          phoneNumber: props.phoneNumber,
+          day: date.getDate(),
+          month: date.getMonth() + 1,
+          year: date.getFullYear(),
+          time: date.toLocaleTimeString('vi-VN'),
+          totalMoney:
+            productsSelected.reduce(
+              (total: number, product: any) =>
+                total + Number(product.price) * 1000,
+              0,
+            ) + Number(props.deliveryPrice),
+          status: 'Đang chuẩn bị',
+        })
+        .then(() => {
+          props.setIsSuccess(true);
+          sessionStorage.clear();
+        });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      setOpen(true);
+    }
   };
 
   useEffect(() => {
@@ -125,17 +147,26 @@ export default function Coffee(props: any) {
       )}
       <div className="order">
         <div className="order-header">
-          <p style={{ padding: '8px 0', fontSize: 18 }}>Các món đã chọn </p>
-          <p
+          <div>
+            <p style={{ padding: '8px 0', fontSize: 18 }}>Các món đã chọn </p>
+          </div>
+          <div
             style={{
-              padding: '8px',
-              borderRadius: '20px',
-              border: '1px solid black',
+              display: 'flex',
+              justifyContent: 'center',
               alignItems: 'center',
+              border: '1px solid #000',
+              borderRadius: '20px',
+              padding: '8px',
+              cursor: 'pointer',
+            }}
+            onClick={() => {
+              sessionStorage.removeItem('productId');
+              window.location.reload();
             }}
           >
-            Thêm món
-          </p>
+            Xóa giỏ hàng
+          </div>
         </div>
         <div className="order-wrap">
           {productsSelected.map((product: any, key) => {
@@ -168,7 +199,7 @@ export default function Coffee(props: any) {
           <div className="thanhtien padding01020">
             <p>Thành tiền</p>
             <p>
-              {productsSelected != null
+              {productsSelected.length > 0
                 ? productsSelected
                     .reduce(
                       (total: number, product: any) =>
@@ -182,7 +213,10 @@ export default function Coffee(props: any) {
                 : ''}
             </p>
           </div>
-          <div className="phigiaohang padding01020">
+          <div
+            className="phigiaohang padding01020"
+            style={{ marginBottom: '10px' }}
+          >
             <div
               style={{
                 width: '100%',
@@ -226,12 +260,34 @@ export default function Coffee(props: any) {
               border: '1px solid transparent',
               backgroundColor: 'white',
               color: '#fa8c16',
+              cursor: 'pointer',
             }}
             onClick={onOrder}
           >
             Đặt hàng
           </p>
         </div>
+        <Stack spacing={2} sx={{ width: '100%' }}>
+          <Snackbar
+            anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+            open={open}
+            autoHideDuration={6000}
+            onClose={() => {
+              setOpen(false);
+            }}
+          >
+            <Alert
+              onClose={() => {
+                setOpen(false);
+              }}
+              severity="error"
+              sx={{ width: '100%' }}
+              style={{ fontSize: '16px' }}
+            >
+              Hãy nhập đủ thông tin cần thiết!
+            </Alert>
+          </Snackbar>
+        </Stack>
       </div>
     </>
   );

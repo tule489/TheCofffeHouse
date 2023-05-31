@@ -11,7 +11,7 @@ export function Pay() {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [deliveryAddress, setDeliveryAddress] = useState('');
   const [isSuccess, setIsSuccess] = useState(false);
-  const [deliveryPrice, setDeliveryPrice] = useState();
+  const [deliveryPrice, setDeliveryPrice] = useState(0);
 
   useEffect(() => {
     setCustomerName('');
@@ -55,6 +55,7 @@ export function Pay() {
             deliveryAddress={deliveryAddress}
             isSuccess={isSuccess}
             setIsSuccess={setIsSuccess}
+            deliveryPrice={deliveryPrice}
           />
         </div>
       </div>

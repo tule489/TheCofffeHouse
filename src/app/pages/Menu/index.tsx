@@ -40,7 +40,7 @@ export function Menu() {
   );
   const [product, setProduct] = useState<Product[]>([]);
   const [productId, setProductId] = useState(-1);
-  const [loading, setloading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const getdata = async () => {
@@ -61,7 +61,7 @@ export function Menu() {
         setCategories(categoryData);
         setDetailedCategory(res1.data);
         setProduct(res2.data);
-        setloading(true);
+        setLoading(true);
       } catch (error) {
         console.log(error);
       }
