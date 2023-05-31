@@ -91,7 +91,15 @@ export default function Header() {
                   </Link>
                 </li>
                 <li className="has-child">
-                  <NavLink className="menu-org" to="/Menu" target="_parent">
+                  <NavLink
+                    className="menu-org"
+                    to="/Menu"
+                    target="_parent"
+                    onClick={() => {
+                      sessionStorage.removeItem('categoryId');
+                      sessionStorage.removeItem('categoryDetailId');
+                    }}
+                  >
                     Menu <img src={iconmenu} alt="" />
                   </NavLink>
                   <ul className="menu_child1">

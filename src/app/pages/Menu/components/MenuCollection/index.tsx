@@ -6,6 +6,14 @@ import CategoryItem from './CategoryItem';
 
 export default function MenuCollection(props) {
   const [change, setChange] = useState(false);
+  const [categories, setCategories] = useState(props.categories);
+
+  useEffect(() => {
+    if (sessionStorage.getItem('categoryId'))
+      categories.filter(
+        e => e.id == sessionStorage.getItem('categoryId'),
+      )[0].isOpen = true;
+  }, []);
 
   return (
     <>
@@ -16,7 +24,7 @@ export default function MenuCollection(props) {
               <li className="sidebar_menu_lv1-li">
                 <li className="sidebar_menu_lv1-link  ">Tất cả</li>
               </li>
-              {props.categories.map(category => {
+              {categories.map(category => {
                 return (
                   <>
                     <li className="sidebar_menu_lv1-li block">
@@ -28,6 +36,7 @@ export default function MenuCollection(props) {
                           setChange(!change);
                           props.setCategory(category.id);
                         }}
+                        id={category.id}
                       >
                         {category.name}
                       </li>
@@ -39,7 +48,13 @@ export default function MenuCollection(props) {
                           return (
                             <ul className="sidebar_menu_lv2">
                               <li
-                                onClick={() => props.setDetailCategoryKey(e.id)}
+                                onClick={() => {
+                                  props.setDetailCategoryKey(e.id);
+                                  sessionStorage.setItem(
+                                    'categoryDetailId',
+                                    e.id,
+                                  );
+                                }}
                               >
                                 {e.name}
                               </li>

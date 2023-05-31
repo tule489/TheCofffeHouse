@@ -35,6 +35,21 @@ export default class SimpleSlider extends Component {
                 <img src={img5} alt="" />
               </a>
             </div>
+            <div>
+              <a href="#">
+                <img src={img6} alt="" />
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <img src={img7} alt="" />
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <img src={img8} alt="" />
+              </a>
+            </div>
           </Slider>
         </div>
       </>

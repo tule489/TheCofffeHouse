@@ -21,6 +21,7 @@ import { NotFoundPage } from './components/NotFoundPage/Loadable';
 import { Recruits } from './pages/Recruitment';
 import { Home } from './pages/Home/Loadable';
 import { Store } from './pages/Store/Loadable';
+import { ProductDetail } from './pages/ProductsDetail/Loadable';
 
 // import { useTranslation } from 'react-i18next';
 
@@ -45,6 +46,9 @@ export function App() {
         <Route path="/Store" element={<Store />} />
         <Route path="/HouseStory" element={<HouseStory />} />
         <Route path="/Recruits" element={<Recruits />} />
+        <Route path="/Product/:id" element={<ProductDetail />} />
+        <Route path="/Menu/:categoryId/:categoryDetailId" element={<Menu />} />
+
         {/* <Route path="/" element={<HomePage />} />
         <Route path="/" element={<NotFoundPage />} /> */}
       </Routes>

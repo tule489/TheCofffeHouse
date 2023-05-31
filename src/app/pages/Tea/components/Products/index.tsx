@@ -3,6 +3,7 @@ import './index.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Loading from 'app/components/Loading';
+import { NavLink, Link } from 'react-router-dom';
 
 interface Product {
   id?: string;
@@ -12,9 +13,10 @@ interface Product {
   image?: string;
   description?: string;
 }
-export default function Tea() {
+export default function Coffee() {
   const [product, setProduct] = useState<Product[]>([]);
   const [loading, setloading] = useState(false);
+  const [productId, setProductId] = useState();
 
   useEffect(() => {
     const getdata = async () => {
@@ -22,7 +24,6 @@ export default function Tea() {
         const res2 = await axios.get(
           'https://thecoffeehousebe-production.up.railway.app/api/v1/products/getAll',
         );
-
         setProduct(res2.data);
         setloading(true);
       } catch (error) {
@@ -39,34 +40,29 @@ export default function Tea() {
     <>
       <div id="coffee">
         <div className="coffee-container">
-          <h3>Trà Tại Nhà</h3>
+          <h3>Cà Phê Tại Nhà</h3>
           <div className="coffee-menu">
             {loading ? (
               filteredProducts.map(product => {
-                {
-                  return (
-                    <>
-                      <div className="coffee-item">
+                return (
+                  <>
+                    <div className="coffee-item" key={product.id}>
+                      <NavLink to={`/Product/${product.id}`}>
                         <div className="menu-item">
-                          <a href="../html/spcaphe.html">
+                          <a>
                             <img src={product.image} alt="" />
                           </a>
                         </div>
                         <div className="menu_item_info">
                           <h3>
-                            <a
-                              href="../html/spcaphe.html"
-                              title="Cà Phê Rang Xay Original 1 250gr"
-                            >
-                              {product.name}
-                            </a>
+                            <a title="">{product.name}</a>
                           </h3>
                           <h4 className="original_price">{product.price}đ</h4>
                         </div>
-                      </div>
-                    </>
-                  );
-                }
+                      </NavLink>
+                    </div>
+                  </>
+                );
               })
             ) : (
               <Loading />

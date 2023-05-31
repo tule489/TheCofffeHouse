@@ -168,7 +168,17 @@
 }
 .sidebar_menu_lv1-link:hover{
     color: #EA8025;
+    cursor: pointer !important;
 }
 .sidebar_menu_lv1-link > li:hover{
     color: #EA8025;
+}
+.orange{
+    color: #EA8025;
+
+}
+.sidebar_menu_lv2 li:hover{
+    color: #EA8025;
+    cursor: pointer !important;
+
 }

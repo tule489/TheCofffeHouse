@@ -4,8 +4,8 @@
 .collection-warp{
     width: 82%;
     margin:auto;
-    display:flex;
-    justify-content:space-between;
+    /* display:flex;
+    justify-content:space-between; */
     padding: 40px 0 50px;
 }
 

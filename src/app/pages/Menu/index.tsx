@@ -9,6 +9,8 @@ import Footer from '../../components/Footer';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Loading from 'app/components/Loading';
+import { NavLink, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 interface category {
   name?: string;
@@ -54,10 +56,12 @@ export function Menu() {
         const res2 = await axios.get(
           'https://thecoffeehousebe-production.up.railway.app/api/v1/products/getAll',
         );
+
         const categoryData: category[] = res.data;
         categoryData.map(e => {
           e.isOpen = false;
         });
+        //setsinglecategories(res3.data);
         setCategories(categoryData);
         setDetailedCategory(res1.data);
         setProduct(res2.data);
@@ -77,36 +81,27 @@ export function Menu() {
       </Helmet>
       <Header />
       <div id="collection">
-        {productId === -1 ? (
-          <>
-            {loading ? (
-              <div className="collection-warp">
-                <MenuCollection
-                  setDetailCategoryKey={setDetailCategoryKey}
-                  categories={categories}
-                  detailedCategory={detailedCategory}
-                />
-                <ProductCollection
-                  detailcategoryKey={DetailcategoryKey}
-                  detailedCategory={detailedCategory}
-                  product={product}
-                  setProductId={setProductId}
-                />
-              </div>
-            ) : (
-              <Loading />
-            )}
-          </>
-        ) : (
-          <>
-            <Products
-              categories={categories}
-              productId={productId}
-              product={product}
-              ProductKey={productKey}
-            />
-          </>
-        )}
+        <div>
+          {loading ? (
+            <div className="collection-warp">
+              <MenuCollection
+                setDetailCategoryKey={setDetailCategoryKey}
+                categories={categories}
+                detailedCategory={detailedCategory}
+                detailcategoryKey={DetailcategoryKey}
+              />
+              <ProductCollection
+                setDetailCategoryKey={setDetailCategoryKey}
+                detailcategoryKey={DetailcategoryKey}
+                detailedCategory={detailedCategory}
+                product={product}
+                setProductId={setProductId}
+              />
+            </div>
+          ) : (
+            <Loading />
+          )}
+        </div>
       </div>
       <Footer />
     </>
