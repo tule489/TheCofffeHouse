@@ -11,7 +11,6 @@ export function Coffee() {
         <meta name="description" content="A Boilerplate application homepage" />
       </Helmet>
       <Header />
-
       <Footer />
     </>
   );
