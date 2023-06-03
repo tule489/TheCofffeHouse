@@ -137,6 +137,7 @@ export default function Coffee(props: any) {
                 }}
                 onClick={() => {
                   props.setIsSuccess(false);
+                  window.location.reload();
                 }}
               >
                 OK
@@ -172,7 +173,7 @@ export default function Coffee(props: any) {
           {productsSelected.map((product: any, key) => {
             return (
               <div className="order-container" key={product.id}>
-                <span>{product.id}</span>
+                <span>{key + 1}</span>
                 <div style={{ width: '20%' }}>
                   <img src={product.image} alt="" style={{ width: '100%' }} />
                 </div>
