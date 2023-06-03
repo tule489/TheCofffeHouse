@@ -8,7 +8,7 @@ export function Coffee() {
   return (
     <>
       <Helmet>
-        <title>Home</title>
+        <title>Cà phê</title>
         <meta name="description" content="A Boilerplate application homepage" />
       </Helmet>
       <Header />

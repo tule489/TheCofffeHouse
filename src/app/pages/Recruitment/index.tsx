@@ -8,7 +8,7 @@ export function Recruits() {
   return (
     <>
       <Helmet>
-        <title>Home</title>
+        <title>Tuyển dụng</title>
         <meta name="description" content="A Boilerplate application homepage" />
       </Helmet>
       <Header />

@@ -10,7 +10,7 @@ export function Store() {
   return (
     <>
       <Helmet>
-        <title>Home</title>
+        <title>Cửa hàng</title>
         <meta name="description" content="A Boilerplate application homepage" />
       </Helmet>
       <Header />

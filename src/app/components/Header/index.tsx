@@ -73,9 +73,9 @@ export default function Header() {
           <div className="header-nav">
             <div className="header-logo">
               <h1 className="hidden">
-                <Link to="/" target="_parent">
+                <NavLink to="/" target="_parent">
                   THE CO̲FFEE HO̲USE
-                </Link>
+                </NavLink>
               </h1>
             </div>
             <div className="header-menu">
@@ -86,9 +86,9 @@ export default function Header() {
                   </NavLink>
                 </li>
                 <li>
-                  <Link className="menu-org" to="/Tea " target="_parent">
+                  <NavLink className="menu-org" to="/Tea " target="_parent">
                     Trà
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="has-child">
                   <NavLink
@@ -103,11 +103,6 @@ export default function Header() {
                     Menu <img src={iconmenu} alt="" />
                   </NavLink>
                   <ul className="menu_child1">
-                    <li className="lv2_title">
-                      <a className="menu-org1" title="Tất cả">
-                        Tất cả
-                      </a>
-                    </li>
                     <ItemMenu
                       categories={categories}
                       detailedCategory={detailedCategory}
