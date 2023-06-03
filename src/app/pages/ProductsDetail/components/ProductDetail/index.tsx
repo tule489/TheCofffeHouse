@@ -30,7 +30,6 @@ export default function ProductDetail(prop) {
                         );
                       })} */}
                 </a>
-                <span>/</span>
               </li>
               <li className="active">
                 <a href="#"> {prop.product.name}</a>
@@ -95,10 +94,10 @@ export default function ProductDetail(prop) {
                   </a>
                 </li>
 
-                <li className="">
-                  <a target="_blank" href="../html/cuahang.html">
-                    <span>Mua tại cửa hàng</span>
-                  </a>
+                <li>
+                  <Link className="odercuahang" to="/Store" target="_parent">
+                    Của hàng
+                  </Link>
                 </li>
                 <li className="take_away">
                   <a href="#">
