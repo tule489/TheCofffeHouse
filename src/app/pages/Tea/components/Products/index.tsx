@@ -40,7 +40,7 @@ export default function Coffee() {
     <>
       <div id="coffee">
         <div className="coffee-container">
-          <h3>Cà Phê Tại Nhà</h3>
+          <h3>Trà Tại Nhà</h3>
           <div className="coffee-menu">
             {loading ? (
               filteredProducts.map(product => {
