@@ -33,7 +33,7 @@ export default function Coffee() {
     getdata();
   }, []);
   const filteredProducts = product.filter(
-    product => product.detailedCategoryId == '44',
+    product => product.detailedCategoryId == '6',
   );
   console.log(filteredProducts);
   return (

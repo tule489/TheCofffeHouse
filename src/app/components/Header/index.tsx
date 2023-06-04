@@ -73,9 +73,9 @@ export default function Header() {
           <div className="header-nav">
             <div className="header-logo">
               <h1 className="hidden">
-                <NavLink to="/" target="_parent">
+                <Link to="/" target="_parent">
                   THE CO̲FFEE HO̲USE
-                </NavLink>
+                </Link>
               </h1>
             </div>
             <div className="header-menu">
