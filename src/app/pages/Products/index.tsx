@@ -9,8 +9,6 @@ export default function Product(props) {
     e => e.detailedCategoryId === props.productId,
   );
 
-  console.log(categoryFitered);
-
   const onOrder = (productId: any): void => {
     if (sessionStorage.getItem('productId')) {
       sessionStorage.setItem(

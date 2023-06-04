@@ -17,8 +17,7 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
 export default function Coffee(props: any) {
   const [productsSelected, setProductsSelected] = useState([]);
   const [open, setOpen] = useState(false);
-
-  console.log(props.deliveryPrice);
+  var orderId;
 
   const onDeleteItem = (key: any) => {
     let list = sessionStorage.getItem('productId')?.split(',');
@@ -76,10 +75,19 @@ export default function Coffee(props: any) {
             ) + Number(props.deliveryPrice),
           status: 'Đang chuẩn bị',
         })
+        .then(result => {
+          props.setIsSuccess(true);
+          sessionStorage.clear();
+          console.log(result.data.data.id);
+        });
+
+      await axios
+        .post(`${API_END_POINT}/api/v1/orders/addOrderDetails/`, {})
         .then(() => {
           props.setIsSuccess(true);
           sessionStorage.clear();
         });
+
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       setOpen(true);
