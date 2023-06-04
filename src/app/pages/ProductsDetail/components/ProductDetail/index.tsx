@@ -88,21 +88,16 @@ export default function ProductDetail(prop) {
             </div>
             <div className="body-content-right-bottom">
               <ul className="order_methods">
-                <li className="">
+                {/* <li className="">
                   <a href="#">
                     <span>Đặt giao tận nơi</span>
                   </a>
-                </li>
-
+                </li> */}
                 <li>
-                  <Link className="odercuahang" to="/Store" target="_parent">
-                    Của hàng
-                  </Link>
+                  <span>Mua ngay</span>
                 </li>
-                <li className="take_away">
-                  <a href="#">
-                    <span>Mua mang đi</span>
-                  </a>
+                <li>
+                  <span>Thêm vào giỏ hàng</span>
                 </li>
               </ul>
             </div>
