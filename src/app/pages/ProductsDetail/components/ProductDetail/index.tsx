@@ -109,16 +109,11 @@ export default function ProductDetail(prop) {
                     <span>Đặt giao tận nơi</span>
                   </a>
                 </li>
-
                 <li>
-                  <Link className="odercuahang" to="/Store" target="_parent">
-                    Của hàng
-                  </Link>
+                  <span>Mua ngay</span>
                 </li>
-                <li className="take_away">
-                  <a href="#">
-                    <span>Mua mang đi</span>
-                  </a>
+                <li>
+                  <span>Thêm vào giỏ hàng</span>
                 </li>
               </ul>
             </div>
