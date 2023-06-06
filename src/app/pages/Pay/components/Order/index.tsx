@@ -17,8 +17,7 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
 export default function Coffee(props: any) {
   const [productsSelected, setProductsSelected] = useState([]);
   const [open, setOpen] = useState(false);
-
-  console.log(props.deliveryPrice);
+  var orderId;
 
   const onDeleteItem = (key: any) => {
     let list = sessionStorage.getItem('productId')?.split(',');
@@ -64,8 +63,10 @@ export default function Coffee(props: any) {
           customerName: props.customerName,
           deliveryAddress: props.deliveryAddress,
           phoneNumber: props.phoneNumber,
-          day: date.getDate(),
-          month: date.getMonth() + 1,
+          // day: date.getDate(),
+          // month: date.getMonth() + 1,
+          day: 1,
+          month: 1,
           year: date.getFullYear(),
           time: date.toLocaleTimeString('vi-VN'),
           totalMoney:
@@ -76,9 +77,18 @@ export default function Coffee(props: any) {
             ) + Number(props.deliveryPrice),
           status: 'Đang chuẩn bị',
         })
-        .then(() => {
+        .then(result => {
+          orderId = Number(result.data.data.id);
           props.setIsSuccess(true);
-          sessionStorage.clear();
+        });
+
+      await axios
+        .post(
+          `${API_END_POINT}/api/v1/orders/addOrderDetails/${orderId}`,
+          sessionStorage.getItem('productId')?.split(','),
+        )
+        .then(() => {
+          sessionStorage.removeItem('productId');
         });
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
@@ -180,7 +190,12 @@ export default function Coffee(props: any) {
                 <div style={{ width: '45%' }}>
                   <p>{product.name}</p>
                   <p>Lớn</p>
-                  <p onClick={() => onDeleteItem(key)}>Xóa</p>
+                  <p
+                    style={{ cursor: 'pointer' }}
+                    onClick={() => onDeleteItem(key)}
+                  >
+                    Xóa
+                  </p>
                 </div>
                 <div style={{ marginRight: '7%' }}>
                   <p>

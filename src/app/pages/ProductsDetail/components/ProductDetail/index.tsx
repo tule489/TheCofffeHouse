@@ -10,6 +10,17 @@ export default function ProductDetail(prop) {
   // );
   // console.log(categoryFitered);
 
+  const onOrder = (productId: any): void => {
+    if (sessionStorage.getItem('productId')) {
+      sessionStorage.setItem(
+        'productId',
+        sessionStorage.getItem('productId') + `,${productId}`,
+      );
+    } else {
+      sessionStorage.setItem('productId', productId);
+    }
+  };
+
   return (
     <>
       <>
@@ -89,7 +100,12 @@ export default function ProductDetail(prop) {
             <div className="body-content-right-bottom">
               <ul className="order_methods">
                 <li className="">
-                  <a href="#">
+                  <a
+                    href="/pay"
+                    onClick={() => {
+                      onOrder(prop.product.id);
+                    }}
+                  >
                     <span>Đặt giao tận nơi</span>
                   </a>
                 </li>

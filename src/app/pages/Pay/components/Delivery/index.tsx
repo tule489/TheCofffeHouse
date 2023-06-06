@@ -28,15 +28,15 @@ export default function Coffee(props: any) {
         },
         {
           ten: 'Liễu Giai',
-          gia: 10000,
+          gia: 15000,
         },
         {
           ten: 'Ngọc Hà',
-          gia: 10000,
+          gia: 17000,
         },
         {
           ten: 'Nguyễn Trung Trực',
-          gia: 10000,
+          gia: 16000,
         },
         {
           ten: 'Phúc Xá',
@@ -48,7 +48,7 @@ export default function Coffee(props: any) {
         },
         {
           ten: 'Thành Công',
-          gia: 10000,
+          gia: 12000,
         },
         {
           ten: 'Trúc Bạch',

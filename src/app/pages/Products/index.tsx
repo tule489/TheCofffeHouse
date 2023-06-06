@@ -9,8 +9,6 @@ export default function Product(props) {
     e => e.detailedCategoryId === props.productId,
   );
 
-  console.log(categoryFitered);
-
   const onOrder = (productId: any): void => {
     if (sessionStorage.getItem('productId')) {
       sessionStorage.setItem(
@@ -104,7 +102,7 @@ export default function Product(props) {
                 <div className="body-content-right-bottom">
                   <ul className="order_methods">
                     <li className="">
-                      <a href="/Pay" onClick={() => onOrder(product.id)}>
+                      <a href="/pay" onClick={() => onOrder(product.id)}>
                         <span>Đặt giao tận nơi</span>
                       </a>
                     </li>
