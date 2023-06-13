@@ -76,7 +76,7 @@ export function Menu() {
   return (
     <>
       <Helmet>
-        <title>Home</title>
+        <title>Menu</title>
         <meta name="description" content="A Boilerplate application homepage" />
       </Helmet>
       <Header />

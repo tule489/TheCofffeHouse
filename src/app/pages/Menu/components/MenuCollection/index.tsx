@@ -21,6 +21,9 @@ export default function MenuCollection(props) {
         <div className="collection-left-menu ">
           <div className="sidebar_menu">
             <ul className="sidebar_menu_lv1">
+              <li className="sidebar_menu_lv1-li">
+                {/* <li className="sidebar_menu_lv1-link  ">Tất cả</li> */}
+              </li>
               {categories.map(category => {
                 return (
                   <>

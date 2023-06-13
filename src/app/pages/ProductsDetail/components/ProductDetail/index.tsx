@@ -1,14 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './index.css';
 import { Link } from 'react-router-dom';
+import Stack from '@mui/material/Stack';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert, { AlertProps } from '@mui/material/Alert';
+
+const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
+  props,
+  ref,
+) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
 
 // import axios from './axios';
 export default function ProductDetail(prop) {
+  const [open, setOpen] = useState(false);
   // const productFitered = prop.product.filter(e => e.id === prop.productId);
   // const categoryFitered = prop.product.filter(
   //   e => e.detailedCategoryId === prop.productId,
   // );
   // console.log(categoryFitered);
+
+  const onOrder = (productId: any): void => {
+    if (sessionStorage.getItem('productId')) {
+      sessionStorage.setItem(
+        'productId',
+        sessionStorage.getItem('productId') + `,${productId}`,
+      );
+    } else {
+      sessionStorage.setItem('productId', productId);
+    }
+  };
 
   return (
     <>
@@ -30,7 +52,6 @@ export default function ProductDetail(prop) {
                         );
                       })} */}
                 </a>
-                <span>/</span>
               </li>
               <li className="active">
                 <a href="#"> {prop.product.name}</a>
@@ -89,21 +110,32 @@ export default function ProductDetail(prop) {
             </div>
             <div className="body-content-right-bottom">
               <ul className="order_methods">
-                <li className="">
-                  <a href="#">
-                    <span>Đặt giao tận nơi</span>
+                <li style={{ width: '80%' }}>
+                  <a
+                    href="/pay"
+                    onClick={() => {
+                      onOrder(prop.product.id);
+                    }}
+                  >
+                    <span>Mua ngay</span>
                   </a>
                 </li>
-
-                <li className="">
-                  <a target="_blank" href="../html/cuahang.html">
-                    <span>Mua tại cửa hàng</span>
-                  </a>
-                </li>
-                <li className="take_away">
-                  <a href="#">
-                    <span>Mua mang đi</span>
-                  </a>
+                <li
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    width: '15%',
+                  }}
+                  onClick={() => {
+                    onOrder(prop.product.id);
+                    setOpen(true);
+                    setTimeout(() => {
+                      window.location.reload();
+                    }, 700);
+                  }}
+                >
+                  <i className="fa-solid fa-cart-plus fa-xl"></i>
                 </li>
               </ul>
             </div>
@@ -118,6 +150,27 @@ export default function ProductDetail(prop) {
           </div>
         </div>
       </>
+      <Stack spacing={2} sx={{ width: '100%' }}>
+        <Snackbar
+          anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+          open={open}
+          autoHideDuration={6000}
+          onClose={() => {
+            setOpen(false);
+          }}
+        >
+          <Alert
+            onClose={() => {
+              setOpen(false);
+            }}
+            severity="success"
+            sx={{ width: '100%' }}
+            style={{ fontSize: '16px' }}
+          >
+            Đã thêm sản phẩm vào giỏ hàng!
+          </Alert>
+        </Snackbar>
+      </Stack>
     </>
   );
 }

@@ -33,14 +33,14 @@ export default function Coffee() {
     getdata();
   }, []);
   const filteredProducts = product.filter(
-    product => product.detailedCategoryId == '5',
+    product => product.detailedCategoryId == '6',
   );
   console.log(filteredProducts);
   return (
     <>
       <div id="coffee">
         <div className="coffee-container">
-          <h3>Cà Phê Tại Nhà</h3>
+          <h3>Trà Tại Nhà</h3>
           <div className="coffee-menu">
             {loading ? (
               filteredProducts.map(product => {

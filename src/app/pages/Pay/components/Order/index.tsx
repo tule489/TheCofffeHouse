@@ -76,16 +76,17 @@ export default function Coffee(props: any) {
           status: 'Đang chuẩn bị',
         })
         .then(result => {
+          orderId = Number(result.data.data.id);
           props.setIsSuccess(true);
-          sessionStorage.clear();
-          console.log(result.data.data.id);
         });
 
       await axios
-        .post(`${API_END_POINT}/api/v1/orders/addOrderDetails/`, {})
+        .post(
+          `${API_END_POINT}/api/v1/orders/addOrderDetails/${orderId}`,
+          sessionStorage.getItem('productId')?.split(','),
+        )
         .then(() => {
-          props.setIsSuccess(true);
-          sessionStorage.clear();
+          sessionStorage.removeItem('productId');
         });
 
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -188,7 +189,12 @@ export default function Coffee(props: any) {
                 <div style={{ width: '45%' }}>
                   <p>{product.name}</p>
                   <p>Lớn</p>
-                  <p onClick={() => onDeleteItem(key)}>Xóa</p>
+                  <p
+                    style={{ cursor: 'pointer' }}
+                    onClick={() => onDeleteItem(key)}
+                  >
+                    Xóa
+                  </p>
                 </div>
                 <div style={{ marginRight: '7%' }}>
                   <p>
