@@ -26,8 +26,12 @@ export default function Header() {
   const [detailedCategory, setDetailedCategory] = useState<DetailedCategory[]>(
     [],
   );
+  const [numberOfProduct, setNumberOfProduct] = useState<number | undefined>(
+    sessionStorage.getItem('productId')?.split(',').length,
+  );
+
   useEffect(() => {
-    const getdata = async () => {
+    const getData = async () => {
       try {
         const res = await axios.get(
           'https://thecoffeehousebe-production.up.railway.app/api/v1/categories/getAll',
@@ -42,8 +46,9 @@ export default function Header() {
         console.log(error);
       }
     };
-    getdata();
+    getData();
   }, []);
+
   return (
     <>
       <div className="top-bar">
@@ -198,10 +203,33 @@ export default function Header() {
                 </ul>
               </span>
             </div> */}
-            <div className="header-menu-right">
+            <div className="header-menu-right" style={{ position: 'relative' }}>
               <NavLink className="menu-org" to="/Pay" target="_parent">
                 <i className="header-menu-right-shop fa-solid fa-cart-shopping"></i>
               </NavLink>
+              {sessionStorage.getItem('productId') ? (
+                <div
+                  style={{
+                    backgroundColor: '#FF3300',
+                    color: '#FFF',
+                    borderRadius: '50%',
+                    width: '20px',
+                    height: '20px',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    fontSize: '12px',
+                    position: 'absolute',
+                    top: '5px',
+                    right: '-10px',
+                    padding: '5px',
+                  }}
+                >
+                  {numberOfProduct}
+                </div>
+              ) : (
+                ''
+              )}
             </div>
           </div>
         </div>

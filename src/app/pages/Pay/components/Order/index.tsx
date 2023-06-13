@@ -63,10 +63,8 @@ export default function Coffee(props: any) {
           customerName: props.customerName,
           deliveryAddress: props.deliveryAddress,
           phoneNumber: props.phoneNumber,
-          // day: date.getDate(),
-          // month: date.getMonth() + 1,
-          day: 1,
-          month: 1,
+          day: date.getDate(),
+          month: date.getMonth() + 1,
           year: date.getFullYear(),
           time: date.toLocaleTimeString('vi-VN'),
           totalMoney:
