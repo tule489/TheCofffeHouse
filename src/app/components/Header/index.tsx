@@ -68,7 +68,7 @@ export default function Header() {
           <div>
             <a>
               <img src={img3} alt="" />
-              <span>Freeship từ 50.000vnd</span>
+              <span>Freeship từ 300.000vnd</span>
             </a>
           </div>
         </div>

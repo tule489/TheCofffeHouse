@@ -39,7 +39,7 @@ export function ProductDetail() {
   return (
     <>
       <Helmet>
-        <title>ProductDetail</title>
+        <title>Chi tiết sản phẩm</title>
         <meta name="description" content="A Boilerplate application homepage" />
       </Helmet>
       <Header />

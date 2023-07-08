@@ -78,6 +78,7 @@ export default function Coffee(props: any) {
         .then(result => {
           orderId = Number(result.data.data.id);
           props.setIsSuccess(true);
+          sessionStorage.removeItem('productId');
         });
 
       await axios
@@ -146,6 +147,7 @@ export default function Coffee(props: any) {
                 }}
                 onClick={() => {
                   props.setIsSuccess(false);
+                  sessionStorage.removeItem('productId');
                   window.location.reload();
                 }}
               >
